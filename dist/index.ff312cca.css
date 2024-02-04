@@ -1,0 +1,31 @@
+nav ul {
+  padding: 1%;
+  list-style: none;
+}
+
+nav li {
+  display: inline-block;
+}
+
+nav a {
+  color: #000;
+  padding: 6px 12px;
+  text-decoration: none;
+  display: block;
+}
+
+nav a:hover {
+  color: #fff;
+  background-color: #000;
+}
+
+header {
+  background-color: bisque;
+}
+
+body {
+  color: #000;
+  font: 100% Times New Roman, Times, serif;
+}
+
+/*# sourceMappingURL=index.ff312cca.css.map */
