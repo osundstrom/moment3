@@ -52,7 +52,9 @@ header {
   background-color: $headerbg-color;
 }
 
-
+h1{
+  text-align: center;
+}
 
 .picGrid {
   display: grid;
@@ -60,7 +62,7 @@ header {
   gap: 0;
   width: 50vw;
   margin: auto;
-  
+
   img {
     height: 60vh;
     width: 22vw;

@@ -29,6 +29,10 @@ header {
   background-color: bisque;
 }
 
+h1 {
+  text-align: center;
+}
+
 .picGrid {
   grid-template-columns: repeat(2, 1fr);
   gap: 0;
