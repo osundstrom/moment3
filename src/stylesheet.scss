@@ -7,10 +7,29 @@ $font-style: Arial, Helvetica, sans-serif;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(1, 100vh);
-  width: 50vw;
-  margin: auto;
+  width: 82vw;
+  margin: -10% auto -15% auto;
+  align-items: center;
+  justify-content: center;
+  gap: 1vw;
 
 }
+
+@mixin image ($imageWidth: 22vw){
+    height: 60vh;
+    object-fit: cover;
+    margin: auto;
+    display: block;
+    border: 2px solid $borderdark-color !important;
+
+  @if $imageWidth < 40vw {
+    width: $imageWidth;
+  } @else {
+    width: 40vw;
+  }
+}
+
+
 /*------------------------------------------------------------------*/
 /*------------------------------------------------------------------*/
 /*------------------------------------------------------------------*/
@@ -52,13 +71,19 @@ $border-color: black;
   
 
   img {
-    height: 60vh;
-    width: 22vw;
-    object-fit: cover;
-    margin: auto;
-    display: block;
-    border: 2px solid $borderdark-color !important;
-}}
+    @include image;
+}
+}
+
+.picGrid2 {
+  @include grid1x2;
+  
+
+  img {
+    @include image (50vw);
+    
+}
+}
 
 
 .h1Lines{

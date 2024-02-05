@@ -55,14 +55,37 @@ nav a:hover {
   .picGrid {
     grid-template-rows: repeat(1, 100vh);
     grid-template-columns: repeat(2, 1fr);
-    width: 50vw;
-    margin: auto;
+    justify-content: center;
+    align-items: center;
+    gap: 1vw;
+    width: 82vw;
+    margin: -10% auto -15%;
     display: grid;
   }
 
   .picGrid img {
     object-fit: cover;
     width: 22vw;
+    height: 60vh;
+    margin: auto;
+    display: block;
+    border: 2px solid #fff !important;
+  }
+
+  .picGrid2 {
+    grid-template-rows: repeat(1, 100vh);
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    align-items: center;
+    gap: 1vw;
+    width: 82vw;
+    margin: -10% auto -15%;
+    display: grid;
+  }
+
+  .picGrid2 img {
+    object-fit: cover;
+    width: 40vw;
     height: 60vh;
     margin: auto;
     display: block;
@@ -119,8 +142,11 @@ h1, p {
 .picGrid {
   grid-template-rows: repeat(1, 100vh);
   grid-template-columns: repeat(2, 1fr);
-  width: 50vw;
-  margin: auto;
+  justify-content: center;
+  align-items: center;
+  gap: 1vw;
+  width: 82vw;
+  margin: -10% auto -15%;
   display: grid;
 }
 
