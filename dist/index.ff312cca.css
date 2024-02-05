@@ -4,7 +4,7 @@
   }
 
   header {
-    background-color: #333 !important;
+    background-color: #1a1a1a !important;
   }
 
   nav ul {
@@ -29,17 +29,8 @@
     border: 1px solid #fff !important;
   }
 
-  h1 {
-    text-align: center;
-    text-decoration: underline;
-    color: #fff !important;
-  }
-
-  p {
-    color: #fff !important;
-  }
-
   .picGrid {
+    grid-template-rows: repeat(1, 100vh);
     grid-template-columns: repeat(2, 1fr);
     width: 50vw;
     margin: auto;
@@ -54,6 +45,42 @@
     display: block;
     border: 2px solid #fff !important;
   }
+
+  .h1Lines, .SASS h1 {
+    text-align: center;
+    text-decoration: underline;
+    color: #000 !important;
+  }
+
+  .SASS {
+    width: 50vw;
+    margin: auto;
+  }
+
+  .SASS p {
+    text-align: left;
+    color: #000 !important;
+  }
+
+  .hemsidaKrav, .sassKrav {
+    text-align: left;
+    width: 50vw;
+    margin: auto;
+    color: #000 !important;
+  }
+
+  h2 {
+    text-decoration: underline;
+    color: #000 !important;
+  }
+
+  p {
+    color: #000 !important;
+  }
+}
+
+body {
+  background-color: #fff;
 }
 
 nav ul {
@@ -81,13 +108,14 @@ header {
   background-color: bisque;
 }
 
-h1 {
+h1, p {
   text-align: center;
+  color: #000;
 }
 
 .picGrid {
+  grid-template-rows: repeat(1, 100vh);
   grid-template-columns: repeat(2, 1fr);
-  gap: 0;
   width: 50vw;
   margin: auto;
   display: grid;

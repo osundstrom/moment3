@@ -1,6 +1,15 @@
 
 $font-style: Arial, Helvetica, sans-serif;
 
+@mixin grid1x2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(1, 100vh);
+  width: 50vw;
+  margin: auto;
+}
+
+
 /*------------------------------------------------------------------*/
 /*------------------------------------------------------------------*/
 /*------------------------------------------------------------------*/
@@ -11,14 +20,15 @@ $font-style: Arial, Helvetica, sans-serif;
 /*Mörkt tema*/
 $dark-color: #333;
 $darktheme-background: lighten($dark-color, 20%);
-$headerbgdark-color: lighten($dark-color, 0%);
+$headerbgdark-color: darken($dark-color, 10%);
 $hooverdark-color: lighten($dark-color, 60%);
 $textdark-color: white;
 $borderdark-color: white;
 
 
 /*Ljust tema*/
-$lighttheme-background: white;
+$light-color: #fff;
+$lighttheme-background: $light-color;
 $headerbg-color: bisque;
 $text-color: black;
 $border-color: black;
@@ -61,21 +71,9 @@ $border-color: black;
   }
 
 
-h1{
-  text-align: center;
-  color: $textdark-color !important;
-  text-decoration: underline;
-}
-
-p{
-  color: $textdark-color !important;
-}
-
 .picGrid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  width: 50vw;
-  margin: auto;
+  @include grid1x2;
+  
 
   img {
     height: 60vh;
@@ -89,9 +87,50 @@ p{
 }
 
 
-
+.h1Lines{
+  color: $text-color !important;
+    text-align: center;
+    text-decoration: underline;
 }
 
+.SASS {
+  width: 50vw;
+  margin: auto;
+
+  h1{
+    @extend .h1Lines;
+  }
+
+  p{
+    color: $text-color !important;
+    text-align: left;
+  }
+}
+
+.hemsidaKrav {
+  text-align: left;
+  width: 50vw;
+  margin: auto;
+  color: $text-color !important;
+}
+
+.sassKrav {
+  @extend .hemsidaKrav;
+}
+
+  h2{
+    color: $text-color !important;
+    text-decoration: underline;
+  }
+
+  p{
+    color: $text-color !important;
+  }
+}
+
+
+
+
 /*------------------------------------------------------------------*/
 /*------------------------------------------------------------------*/
 /*------------------------------------------------------------------*/
@@ -99,7 +138,9 @@ p{
 /*------------------------------------------------------------------*/
 
 
-
+body {
+  background-color: $lighttheme-background;
+}
 
 nav {
     ul {
@@ -116,12 +157,12 @@ nav {
       display: block;
       padding: 6px 12px;
       text-decoration: none;
-      color: black;
+      color: $text-color;
     }
 
     a:hover{
-      background-color: black;
-      color: white;
+      background-color: $text-color;
+      color: $light-color;
     }
   }
 
@@ -131,14 +172,16 @@ header {
 
 h1{
   text-align: center;
+  color: $text-color;
+}
+
+p{
+  text-align: center;
+  color:$text-color;
 }
 
 .picGrid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 0;
-  width: 50vw;
-  margin: auto;
+  @include grid1x2;
 
   img {
     height: 60vh;
@@ -150,7 +193,8 @@ h1{
   }
 
 }
-    
+
+
  
 
 
