@@ -58,7 +58,7 @@ $border-color: black;
     margin: auto;
     display: block;
     border: 2px solid $borderdark-color !important;
-}
+}}
 
 
 .h1Lines{
@@ -84,13 +84,9 @@ $border-color: black;
 .hemsidaKrav {
   text-align: left;
   width: 50vw;
-  margin: auto;
+  margin: 0 auto;
   color: $text-color !important;
-}
-
-.sassKrav {
-  @extend .hemsidaKrav;
-}
+  display: block;
 
   h2{
     color: $text-color !important;
@@ -101,6 +97,12 @@ $border-color: black;
     color: $text-color !important;
   }
 }
+
+.sassKrav {
+  @extend .hemsidaKrav;
+
+}
+
 }
 
 
