@@ -1,6 +1,58 @@
 @media (prefers-color-scheme: dark) {
+  body {
+    background-color: #666 !important;
+  }
+
   header {
     background-color: #333 !important;
+  }
+
+  nav ul {
+    padding: 1%;
+    list-style: none;
+  }
+
+  nav li {
+    display: inline-block;
+  }
+
+  nav a {
+    padding: 6px 12px;
+    text-decoration: none;
+    display: block;
+    color: #fff !important;
+  }
+
+  nav a:hover {
+    color: #000 !important;
+    background-color: #ccc !important;
+    border: 1px solid #fff !important;
+  }
+
+  h1 {
+    text-align: center;
+    text-decoration: underline;
+    color: #fff !important;
+  }
+
+  p {
+    color: #fff !important;
+  }
+
+  .picGrid {
+    grid-template-columns: repeat(2, 1fr);
+    width: 50vw;
+    margin: auto;
+    display: grid;
+  }
+
+  .picGrid img {
+    object-fit: cover;
+    width: 22vw;
+    height: 60vh;
+    margin: auto;
+    display: block;
+    border: 2px solid #fff !important;
   }
 }
 
