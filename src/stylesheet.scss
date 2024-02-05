@@ -57,15 +57,7 @@ $border-color: black;
     object-fit: cover;
     margin: auto;
     display: block;
-
-    @if background-color == $darktheme-background !important{
-      border: 2px solid $borderdark-color !important;
-    }
-    @else {
-      border: 2px solid $border-color !important;
-    }
-  }
-
+    border: 2px solid $borderdark-color !important;
 }
 
 
@@ -109,7 +101,7 @@ $border-color: black;
     color: $text-color !important;
   }
 }
-
+}
 
 
 
@@ -142,23 +134,13 @@ p{
 .picGrid {
   @include grid1x2;
 
+
   img {
     height: 60vh;
     width: 22vw;
     object-fit: cover;
     margin: auto;
     display: block;
-    @if background-color == $darktheme-background {
-      border: 2px solid $borderdark-color ;
-    }
-    @else {
-      border: 2px solid $border-color ;
-    }
+    border: 2px solid $border-color ;
   }
-
 }
-
-
- 
-
-

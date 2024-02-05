@@ -69,35 +69,35 @@ nav a:hover {
     border: 2px solid #fff !important;
   }
 
-  .h1Lines, .SASS h1 {
+  .picGrid .h1Lines, .picGrid .SASS h1 {
     text-align: center;
     text-decoration: underline;
     color: #000 !important;
   }
 
-  .SASS {
+  .picGrid .SASS {
     width: 50vw;
     margin: auto;
   }
 
-  .SASS p {
+  .picGrid .SASS p {
     text-align: left;
     color: #000 !important;
   }
 
-  .hemsidaKrav, .sassKrav {
+  .picGrid .hemsidaKrav, .picGrid .sassKrav {
     text-align: left;
     width: 50vw;
     margin: auto;
     color: #000 !important;
   }
 
-  h2 {
+  .picGrid h2 {
     text-decoration: underline;
     color: #000 !important;
   }
 
-  p {
+  .picGrid p {
     color: #000 !important;
   }
 }
