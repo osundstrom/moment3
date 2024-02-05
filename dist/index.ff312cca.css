@@ -1,12 +1,4 @@
 @media (prefers-color-scheme: dark) {
-  body {
-    background-color: #666 !important;
-  }
-
-  header {
-    background-color: #1a1a1a !important;
-  }
-
   nav ul {
     padding: 1%;
     list-style: none;
@@ -27,6 +19,37 @@
     color: #000 !important;
     background-color: #ccc !important;
     border: 1px solid #fff !important;
+  }
+}
+
+nav ul {
+  padding: 1%;
+  list-style: none;
+}
+
+nav li {
+  display: inline-block;
+}
+
+nav a {
+  color: #000;
+  padding: 6px 12px;
+  text-decoration: none;
+  display: block;
+}
+
+nav a:hover {
+  color: #fff;
+  background-color: #000;
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #666 !important;
+  }
+
+  header {
+    background-color: #1a1a1a !important;
   }
 
   .picGrid {
@@ -81,27 +104,6 @@
 
 body {
   background-color: #fff;
-}
-
-nav ul {
-  padding: 1%;
-  list-style: none;
-}
-
-nav li {
-  display: inline-block;
-}
-
-nav a {
-  color: #000;
-  padding: 6px 12px;
-  text-decoration: none;
-  display: block;
-}
-
-nav a:hover {
-  color: #fff;
-  background-color: #000;
 }
 
 header {
