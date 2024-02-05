@@ -1,3 +1,9 @@
+@media (prefers-color-scheme: dark) {
+  header {
+    background-color: #333 !important;
+  }
+}
+
 nav ul {
   padding: 1%;
   list-style: none;
@@ -23,9 +29,21 @@ header {
   background-color: bisque;
 }
 
-body {
-  color: #000;
-  font: 100% Times New Roman, Times, serif;
+.picGrid {
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0;
+  width: 50vw;
+  margin: auto;
+  display: grid;
+}
+
+.picGrid img {
+  object-fit: cover;
+  border: 2px solid #000;
+  width: 22vw;
+  height: 60vh;
+  margin: auto;
+  display: block;
 }
 
 /*# sourceMappingURL=index.ff312cca.css.map */

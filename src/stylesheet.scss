@@ -1,4 +1,28 @@
 
+$font-style: Arial, Helvetica, sans-serif;
+
+
+
+$darktheme-background: #333;
+
+
+
+
+$lighttheme-background: white;
+$headerbg-color: bisque;
+$text-color: black;
+$border-color: black;
+
+
+
+@media (prefers-color-scheme: dark) {
+
+  header {
+    background-color: $darktheme-background !important;
+
+  }
+}
+
 
 nav {
     ul {
@@ -25,5 +49,30 @@ nav {
   }
 
 header {
-  background-color: bisque;
+  background-color: $headerbg-color;
 }
+
+
+
+.picGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0;
+  width: 50vw;
+  margin: auto;
+  
+  img {
+    height: 60vh;
+    width: 22vw;
+    border: 2px solid $border-color;
+    object-fit: cover;
+    margin: auto;
+    display: block;
+  }
+
+}
+    
+ 
+
+
+
