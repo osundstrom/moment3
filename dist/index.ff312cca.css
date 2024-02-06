@@ -22,25 +22,27 @@
   }
 }
 
-nav ul {
-  padding: 1%;
-  list-style: none;
-}
+@media (prefers-color-scheme: light) {
+  nav ul {
+    padding: 1%;
+    list-style: none;
+  }
 
-nav li {
-  display: inline-block;
-}
+  nav li {
+    display: inline-block;
+  }
 
-nav a {
-  color: #000;
-  padding: 6px 12px;
-  text-decoration: none;
-  display: block;
-}
+  nav a {
+    color: #000;
+    padding: 6px 12px;
+    text-decoration: none;
+    display: block;
+  }
 
-nav a:hover {
-  color: #fff;
-  background-color: #000;
+  nav a:hover {
+    color: #fff;
+    background-color: #000;
+  }
 }
 
 @media (width >= 1200px) and (width <= 6000px) and (prefers-color-scheme: dark) {
@@ -269,7 +271,7 @@ nav a:hover {
     gap: 1vw;
     width: 82vw;
     margin: -10% auto -15%;
-    display: grid;
+    display: none;
   }
 
   .picGrid img {
@@ -371,7 +373,7 @@ nav a:hover {
     gap: 1vw;
     width: 82vw;
     margin: -10% auto -15%;
-    display: grid;
+    display: none;
   }
 
   .picGrid img {
@@ -410,7 +412,7 @@ nav a:hover {
   }
 
   .SASS {
-    width: 50vw;
+    width: 70vw;
     margin: auto;
   }
 
@@ -427,7 +429,7 @@ nav a:hover {
 
   #hemsidaKrav {
     text-align: left;
-    width: 50vw;
+    width: 70vw;
     margin: 0 auto;
     display: block;
     color: #000 !important;
@@ -444,7 +446,211 @@ nav a:hover {
 
   #sassKrav {
     text-align: left;
+    width: 70vw;
+    margin: 0 auto;
+    display: block;
+    color: #000 !important;
+  }
+}
+
+@media (width >= 300px) and (width <= 599px) and (prefers-color-scheme: dark) {
+  body {
+    width: 100vw;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #666 !important;
+  }
+
+  header {
+    width: 100vw;
+    margin-top: -2vh;
+    margin-left: -1vw;
+    background-color: #1a1a1a !important;
+  }
+
+  .picGrid {
+    grid-template-rows: repeat(1, 100vh);
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    align-items: center;
+    gap: 1vw;
+    width: 82vw;
+    margin: -10% auto -15%;
+    display: none;
+  }
+
+  .picGrid img {
+    object-fit: cover;
+    width: 22vw;
+    height: 60vh;
+    margin: auto;
+    display: block;
+    border: 2px solid #fff !important;
+  }
+
+  .picGrid2 {
+    grid-template-rows: repeat(1, 100vh);
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    align-items: center;
+    gap: 1vw;
+    width: 82vw;
+    margin: -10% auto -15%;
+    display: grid;
+  }
+
+  .picGrid2 img {
+    object-fit: cover;
+    width: 40vw;
+    height: 60vh;
+    margin: -25vh auto auto;
+    display: block;
+    border: 2px solid #fff !important;
+  }
+
+  .h1Change {
+    text-align: center;
+    text-decoration: underline;
+    color: #000 !important;
+  }
+
+  .SASS {
     width: 50vw;
+    margin: auto;
+  }
+
+  .SASS h1 {
+    text-align: center;
+    text-decoration: underline;
+    color: #000 !important;
+  }
+
+  .SASS p {
+    text-align: left;
+    color: #000 !important;
+  }
+
+  .hemsidaKrav {
+    text-align: left;
+    width: 50vw;
+    margin: 0 auto;
+    display: block;
+    color: #000 !important;
+  }
+
+  .hemsidaKrav h2 {
+    text-decoration: underline;
+    color: #000 !important;
+  }
+
+  .hemsidaKrav p {
+    color: #000 !important;
+  }
+
+  .sassKrav {
+    text-align: left;
+    width: 50vw;
+    margin: 0 auto;
+    display: block;
+    color: #000 !important;
+  }
+}
+
+@media (width >= 300px) and (width <= 599px) and (prefers-color-scheme: light) {
+  body {
+    background-color: #fff;
+    width: 100vw;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  header {
+    background-color: bisque;
+    width: 100vw;
+    margin-top: -2vh;
+    margin-left: -1vw;
+  }
+
+  .picGrid {
+    grid-template-rows: repeat(1, 100vh);
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    align-items: center;
+    gap: 1vw;
+    width: 82vw;
+    margin: -10% auto -15%;
+    display: none;
+  }
+
+  .picGrid img {
+    object-fit: cover;
+    border: 2px solid #000;
+    width: 22vw;
+    height: 60vh;
+    margin: auto;
+    display: block;
+  }
+
+  .picGrid2 {
+    grid-template-rows: repeat(1, 100vh);
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    align-items: center;
+    gap: 1vw;
+    width: 82vw;
+    margin: -10% auto -15%;
+    display: grid;
+  }
+
+  .picGrid2 img {
+    object-fit: cover;
+    border: 2px solid #000;
+    width: 40vw;
+    height: 60vh;
+    margin: -25vh auto auto;
+    display: block;
+  }
+
+  #h1Change {
+    color: #000;
+    text-align: center;
+    text-decoration: underline;
+  }
+
+  .SASS {
+    width: 88vw;
+    margin: auto;
+  }
+
+  .SASS h1 {
+    text-align: center;
+    text-decoration: underline;
+    color: #000 !important;
+  }
+
+  .SASS p {
+    color: #000;
+    text-align: left;
+  }
+
+  #hemsidaKrav {
+    text-align: left;
+    width: 88vw;
+    margin: 0 auto;
+    display: block;
+    color: #000 !important;
+  }
+
+  #hemsidaKrav h2 {
+    color: #000;
+    text-decoration: underline;
+  }
+
+  #hemsidaKrav p {
+    color: #000;
+  }
+
+  #sassKrav {
+    text-align: left;
+    width: 88vw;
     margin: 0 auto;
     display: block;
     color: #000 !important;
