@@ -1,0 +1,94 @@
+
+
+  
+  /*Mörkt tema*/
+$dark-color: #333;
+$darktheme-background: lighten($dark-color, 20%);
+$headerbgdark-color: darken($dark-color, 10%);
+$hooverdark-color: lighten($dark-color, 60%);
+$textdark-color: lighten($dark-color, 90%);
+$borderdark-color: lighten($dark-color, 100%);
+
+
+/*Ljust tema*/
+$light-color: #fff;
+$lighttheme-background: $light-color;
+$headerbg-color: bisque;
+$text-color: darken($light-color, 100%);
+$border-color: darken($light-color, 100%);
+  
+  
+/*----------------------------------Dark--------------------------------*/
+
+
+
+
+
+  @media (prefers-color-scheme: dark) {
+  
+  
+    nav {
+      ul {
+        padding: 1%;
+        list-style: none;
+      }
+    
+      li { 
+        display: inline-block;
+        
+      }
+    
+      a {
+        display: block;
+        padding: 6px 12px;
+        text-decoration: none;
+        color: $textdark-color !important;
+      }
+  
+      a:hover{
+        background-color: $hooverdark-color !important;
+        color: $text-color !important;
+        border: 1px solid $borderdark-color !important;
+      }
+    }
+  
+ 
+}
+  
+  
+  /*-------------------------------Light-----------------------------------*/
+  
+
+
+
+
+  @media (prefers-color-scheme: light) {
+  nav {
+      ul {
+        padding: 1%;
+        list-style: none;
+      }
+    
+      li { 
+        display: inline-block;
+        
+      }
+    
+      a {
+        display: block;
+        padding: 6px 12px;
+        text-decoration: none;
+        color: $text-color;
+      }
+  
+      a:hover{
+        background-color: $text-color;
+        color: $light-color;
+      }
+    }
+  }
+  
+   
+  
+  
+  
