@@ -494,7 +494,7 @@ $font-style: Arial, Helvetica, sans-serif;
   
   /*------------------------SASS------------------------------------------*/
   .SASS {
-    width: 50vw;
+    width: 88vw;
     margin: auto;
   
     h1{
@@ -510,6 +510,7 @@ $font-style: Arial, Helvetica, sans-serif;
   /*------------------------Krav------------------------------------------*/
   .hemsidaKrav {
     @include hemsidaText;
+    width: 88vw;
   
     h2{
       color: $text-color !important;
@@ -524,6 +525,7 @@ $font-style: Arial, Helvetica, sans-serif;
   
   .sassKrav {
     @include hemsidaText;
+    width: 88vw;
   
   }
   
