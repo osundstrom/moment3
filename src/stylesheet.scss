@@ -85,7 +85,7 @@ $dark-color: #333;
 $darktheme-background: lighten($dark-color, 20%);
 $headerbgdark-color: darken($dark-color, 10%);
 $hooverdark-color: lighten($dark-color, 60%);
-$textdark-color: lighten($dark-color, 80%);
+$textdark-color: lighten($dark-color, 90%);
 $borderdark-color: lighten($dark-color, 100%);
 
 
@@ -156,7 +156,7 @@ $font-style: Arial, Helvetica, sans-serif;
   }
 
   p{
-    color: $textdark-color !important;
+    color: $text-color !important;
     text-align: left;
   }
 }
@@ -166,12 +166,12 @@ $font-style: Arial, Helvetica, sans-serif;
   @include hemsidaText;
 
   h2{
-    color: $textdark-color !important;
+    color: $text-color !important;
     text-decoration: underline;
   }
 
   p{
-    color: $textdark-color !important;
+    color: $text-color !important;
   }
 }
 
@@ -326,7 +326,7 @@ $font-style: Arial, Helvetica, sans-serif;
     }
   
     p{
-      color: $textdark-color !important;
+      color: $text-color !important;
       text-align: left;
     }
   }
@@ -336,12 +336,12 @@ $font-style: Arial, Helvetica, sans-serif;
     @include hemsidaText;
   
     h2{
-      color: $textdark-color !important;
+      color: $text-color !important;
       text-decoration: underline;
     }
   
     p{
-      color: $textdark-color !important;
+      color: $text-color !important;
     }
   }
   
@@ -502,7 +502,7 @@ $font-style: Arial, Helvetica, sans-serif;
     }
   
     p{
-      color: $textdark-color !important;
+      color: $text-color !important;
       text-align: left;
     }
   }
@@ -513,12 +513,12 @@ $font-style: Arial, Helvetica, sans-serif;
     width: 88vw;
   
     h2{
-      color: $textdark-color !important;
+      color: $text-color !important;
       text-decoration: underline;
     }
   
     p{
-      color: $textdark-color !important;
+      color: $text-color !important;
     }
   }
   
