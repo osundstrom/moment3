@@ -1,21 +1,6 @@
 
 
-  
-  /*Mörkt tema*/
-$dark-color: #333;
-$darktheme-background: lighten($dark-color, 20%);
-$headerbgdark-color: darken($dark-color, 10%);
-$hooverdark-color: lighten($dark-color, 60%);
-$textdark-color: lighten($dark-color, 90%);
-$borderdark-color: lighten($dark-color, 100%);
-
-
-/*Ljust tema*/
-$light-color: #fff;
-$lighttheme-background: $light-color;
-$headerbg-color: bisque;
-$text-color: darken($light-color, 100%);
-$border-color: darken($light-color, 100%);
+@use "variabels";
   
   
 /*----------------------------------Dark--------------------------------*/
@@ -42,13 +27,13 @@ $border-color: darken($light-color, 100%);
         display: block;
         padding: 6px 12px;
         text-decoration: none;
-        color: $textdark-color !important;
+        color: variabels.$textdark-color !important;
       }
   
       a:hover{
-        background-color: $hooverdark-color !important;
-        color: $text-color !important;
-        border: 1px solid $borderdark-color !important;
+        background-color: variabels.$hooverdark-color !important;
+        color: variabels.$text-color !important;
+        border: 1px solid variabels.$borderdark-color !important;
       }
     }
   
@@ -78,12 +63,12 @@ $border-color: darken($light-color, 100%);
         display: block;
         padding: 6px 12px;
         text-decoration: none;
-        color: $text-color;
+        color: variabels.$text-color;
       }
   
       a:hover{
-        background-color: $text-color;
-        color: $light-color;
+        background-color: variabels.$text-color;
+        color: variabels.$light-color;
       }
     }
   }
