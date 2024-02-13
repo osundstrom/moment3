@@ -640,18 +640,28 @@ $font-style: Arial, Helvetica, sans-serif;
 
 #animationPicture img{
   text-align: center;
-  width: 20vw;
-  height: 40vh;
+  width: 5vw;
+  height: 10vh;
   position: relative;
   object-fit: cover;
   border-radius: 10%;
-
+  margin: auto;
 }
 
 #otisIdAnimation{
   position: relative;
 }
 
+
+#animationPicture2 img{
+  text-align: center;
+  width: 5vw;
+  height: 10vh;
+  position: relative;
+  object-fit: cover;
+  border-radius: 10%;
+  margin: auto;
+}
 
 .buttonDiv{
   text-align: center;

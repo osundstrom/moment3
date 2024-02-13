@@ -753,12 +753,23 @@
   text-align: center;
   object-fit: cover;
   border-radius: 10%;
-  width: 20vw;
-  height: 40vh;
+  width: 5vw;
+  height: 10vh;
+  margin: auto;
   position: relative;
 }
 
 #otisIdAnimation {
+  position: relative;
+}
+
+#animationPicture2 img {
+  text-align: center;
+  object-fit: cover;
+  border-radius: 10%;
+  width: 5vw;
+  height: 10vh;
+  margin: auto;
   position: relative;
 }
 
