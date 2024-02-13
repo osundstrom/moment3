@@ -579,6 +579,11 @@ function hmrAccept(bundle /*: ParcelRequire */ , id /*: string */ ) {
 }
 
 },{}],"gLLPy":[function(require,module,exports) {
+"use strict";
+document.getElementById("buttonAnimation").addEventListener("click", function() {
+    document.getElementById("otisIdAnimation").classList.toggle("moveAfterClick");
+    document.getElementById("buttonAnimation").classList.toggle("moveAfterClick");
+});
 
 },{}]},["75sNA","gLLPy"], "gLLPy", "parcelRequire9180")
 

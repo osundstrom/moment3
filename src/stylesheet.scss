@@ -2,6 +2,7 @@
 
 /*------------------------_nav.scss------------------------------------------*/
 @use "nav";
+@use "animation";
 
 
 
@@ -614,3 +615,55 @@ $font-style: Arial, Helvetica, sans-serif;
   }
   } 
   }  
+
+
+    /*------------------------------------------------------------------*/
+/*------------------------------------------------------------------*/
+/*------------------------------------------------------------------*/
+/*------------------------------------------------------------------*/
+/*------------------------------------------------------------------*/
+
+
+#animationText {
+  text-align: center;
+  width: fit-content;
+  font-size: 400%;
+  animation-name: changeTextColor;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  border-radius: 50%;
+  padding: 2%;
+  position: relative;
+
+}
+
+#animationPicture img{
+  text-align: center;
+  width: 20vw;
+  height: 40vh;
+  position: relative;
+  object-fit: cover;
+  border-radius: 10%;
+
+}
+
+#otisIdAnimation{
+  position: relative;
+}
+
+
+.buttonDiv{
+  text-align: center;
+  margin-top: 10vh;
+}
+
+#buttonAnimation {
+  text-align: center;
+  height: 5vh;
+  width: 10vw;
+  font-weight: 900;
+  font-size: 120%;
+  
+}
+

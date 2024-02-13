@@ -45,6 +45,84 @@
   }
 }
 
+@keyframes changeTextColor {
+  from {
+    color: #000;
+    background-color: #fff;
+    transform: translateX(0);
+  }
+
+  to {
+    color: #fff;
+    background-color: #000;
+    transform: translateX(67vw);
+  }
+}
+
+@keyframes diffrentMove {
+  0% {
+    top: 0;
+    left: 2vw;
+  }
+
+  10% {
+    top: 10vh;
+    left: 8vw;
+  }
+
+  20% {
+    top: 0;
+    left: 16vw;
+  }
+
+  30% {
+    top: 10vh;
+    left: 24vw;
+  }
+
+  40% {
+    top: 0;
+    left: 32vw;
+  }
+
+  50% {
+    top: 10vh;
+    left: 40vw;
+  }
+
+  60% {
+    top: 0;
+    left: 48vw;
+  }
+
+  70% {
+    top: 10vh;
+    left: 56vw;
+  }
+
+  80% {
+    top: 0;
+    left: 64vw;
+  }
+
+  90% {
+    top: 10vh;
+    left: 72vw;
+  }
+
+  100% {
+    top: 0;
+    left: 80vw;
+  }
+}
+
+.moveAfterClick {
+  animation-name: diffrentMove;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
 @media (width >= 1200px) and (width <= 6000px) and (prefers-color-scheme: dark) {
   body {
     width: 100vw;
@@ -655,6 +733,46 @@
     display: block;
     color: #000 !important;
   }
+}
+
+#animationText {
+  text-align: center;
+  border-radius: 50%;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 2%;
+  font-size: 400%;
+  animation-name: changeTextColor;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  position: relative;
+}
+
+#animationPicture img {
+  text-align: center;
+  object-fit: cover;
+  border-radius: 10%;
+  width: 20vw;
+  height: 40vh;
+  position: relative;
+}
+
+#otisIdAnimation {
+  position: relative;
+}
+
+.buttonDiv {
+  text-align: center;
+  margin-top: 10vh;
+}
+
+#buttonAnimation {
+  text-align: center;
+  width: 10vw;
+  height: 5vh;
+  font-size: 120%;
+  font-weight: 900;
 }
 
 /*# sourceMappingURL=index.ff312cca.css.map */
