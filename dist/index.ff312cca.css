@@ -745,7 +745,7 @@
   padding: 2%;
   font-size: 400%;
   animation-name: changeTextColor;
-  animation-duration: 4s;
+  animation-duration: 2s;
   animation-iteration-count: infinite;
   animation-direction: alternate;
   position: relative;
