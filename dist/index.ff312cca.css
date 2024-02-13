@@ -59,55 +59,25 @@
   }
 }
 
-@keyframes diffrentMove {
+@keyframes bil1Animation {
   0% {
     top: 0;
-    left: 2vw;
+    left: 0;
   }
 
-  10% {
-    top: 10vh;
-    left: 8vw;
-  }
-
-  20% {
+  25% {
     top: 0;
-    left: 16vw;
-  }
-
-  30% {
-    top: 10vh;
-    left: 24vw;
-  }
-
-  40% {
-    top: 0;
-    left: 32vw;
+    left: 20vw;
   }
 
   50% {
-    top: 10vh;
-    left: 40vw;
-  }
-
-  60% {
     top: 0;
-    left: 48vw;
+    left: 30vw;
   }
 
-  70% {
-    top: 10vh;
-    left: 56vw;
-  }
-
-  80% {
+  75% {
     top: 0;
-    left: 64vw;
-  }
-
-  90% {
-    top: 10vh;
-    left: 72vw;
+    left: 60vw;
   }
 
   100% {
@@ -116,11 +86,43 @@
   }
 }
 
-.moveAfterClick {
-  animation-name: diffrentMove;
-  animation-duration: 2s;
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
+.bil1AfterClick {
+  animation-name: bil1Animation;
+  animation-duration: 10s;
+  animation-iteration-count: 1;
+}
+
+@keyframes bil2Animation {
+  0% {
+    top: 0;
+    left: 0;
+  }
+
+  25% {
+    top: 0;
+    left: 15vw;
+  }
+
+  50% {
+    top: 0;
+    left: 40vw;
+  }
+
+  75% {
+    top: 0;
+    left: 65vw;
+  }
+
+  100% {
+    top: 0;
+    left: 80vw;
+  }
+}
+
+.bil2AfterClick {
+  animation-name: bil2Animation;
+  animation-duration: 9s;
+  animation-iteration-count: 1;
 }
 
 @media (width >= 1200px) and (width <= 6000px) and (prefers-color-scheme: dark) {
@@ -749,30 +751,6 @@
   position: relative;
 }
 
-#animationPicture img {
-  text-align: center;
-  object-fit: cover;
-  border-radius: 10%;
-  width: 5vw;
-  height: 10vh;
-  margin: auto;
-  position: relative;
-}
-
-#otisIdAnimation {
-  position: relative;
-}
-
-#animationPicture2 img {
-  text-align: center;
-  object-fit: cover;
-  border-radius: 10%;
-  width: 5vw;
-  height: 10vh;
-  margin: auto;
-  position: relative;
-}
-
 .buttonDiv {
   text-align: center;
   margin-top: 10vh;
@@ -784,6 +762,23 @@
   height: 5vh;
   font-size: 120%;
   font-weight: 900;
+}
+
+#allaBilar img {
+  width: 100px;
+  position: relative;
+}
+
+#bil1Animation, #bil2Animation {
+  margin-left: 6vw;
+  position: relative;
+}
+
+#bilBanaDiv img {
+  width: 88vw;
+  margin-top: -6vh;
+  margin-left: 5vw;
+  position: absolute;
 }
 
 /*# sourceMappingURL=index.ff312cca.css.map */

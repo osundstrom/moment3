@@ -638,30 +638,6 @@ $font-style: Arial, Helvetica, sans-serif;
 
 }
 
-#animationPicture img{
-  text-align: center;
-  width: 5vw;
-  height: 10vh;
-  position: relative;
-  object-fit: cover;
-  border-radius: 10%;
-  margin: auto;
-}
-
-#otisIdAnimation{
-  position: relative;
-}
-
-
-#animationPicture2 img{
-  text-align: center;
-  width: 5vw;
-  height: 10vh;
-  position: relative;
-  object-fit: cover;
-  border-radius: 10%;
-  margin: auto;
-}
 
 .buttonDiv{
   text-align: center;
@@ -676,4 +652,28 @@ $font-style: Arial, Helvetica, sans-serif;
   font-size: 120%;
   
 }
+
+#allaBilar img {
+  width: 100px;
+  position: relative;
+}
+
+
+#bil1Animation {
+  position: relative;
+  margin-left: 6vw;
+ }
+ 
+ #bil2Animation{
+   position: relative;
+   margin-left: 6vw;
+ }
+
+
+ #bilBanaDiv img{
+    width: 88vw;
+    position: absolute;
+    margin-top: -6vh;
+    margin-left: 5vw;
+ }
 
