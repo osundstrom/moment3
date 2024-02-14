@@ -1,0 +1,88 @@
+
+/*-----------------------Text animering------------------------------------------------*/
+
+@keyframes changeTextColor {
+    from {
+        color: black;
+        background-color: white;
+        transform: translateX(5vw);
+    }
+
+    to {
+        color: white;
+        background-color: black;
+        transform: translateX(72vw);
+    }
+
+}
+
+
+/*-----------------------Bil 1 animering------------------------------------------------*/
+
+@keyframes bil1Animation {
+  0% {
+    left: 0vw;
+    top: 0vh;
+  }
+  25% {
+    left: 20vw;
+    top: 0vh;
+  }
+  50% {
+    left: 30vw;
+    top: 0vh;
+  }
+  75% {
+    left: 60vw;
+    top: 0vh;
+  }
+
+  100% {
+    left: 80vw;
+    top: 0vh;
+  }
+}
+
+
+.bil1AfterClick {
+        animation-name: bil1Animation;
+        animation-duration: 10s;
+        animation-iteration-count: 1;
+      
+}
+
+
+/*-----------------------Bil 2 animering------------------------------------------------*/
+
+@keyframes bil2Animation {
+  0% {
+    left: 0vw;
+    top: 0vh;
+  }
+  25% {
+    left: 15vw;
+    top: 0vh;
+  }
+  50% {
+    left: 40vw;
+    top: 0vh;
+  }
+  75% {
+    left: 65vw;
+    top: 0vh;
+  }
+
+  100% {
+    left: 80vw;
+    top: 0vh;
+    
+  }
+}
+
+
+.bil2AfterClick {
+        animation-name: bil2Animation;
+        animation-duration: 9s;
+        animation-iteration-count: 1;
+      
+}

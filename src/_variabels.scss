@@ -1,0 +1,20 @@
+  
+  
+  /*Mörkt tema*/
+  $dark-color: #333;
+  $darktheme-background: lighten($dark-color, 20%);
+  $headerbgdark-color: darken($dark-color, 10%);
+  $hooverdark-color: lighten($dark-color, 60%);
+  $textdark-color: lighten($dark-color, 90%);
+  $borderdark-color: lighten($dark-color, 100%);
+  
+  
+  /*Ljust tema*/
+  $light-color: #fff;
+  $lighttheme-background: $light-color;
+  $headerbg-color: bisque;
+  $text-color: darken($light-color, 100%);
+  $border-color: darken($light-color, 100%);
+
+  /*Font*/
+$font-style: Arial, Helvetica, sans-serif;
