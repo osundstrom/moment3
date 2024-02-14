@@ -45,17 +45,98 @@
   }
 }
 
-@media (width >= 1200px) and (width <= 6000px) and (prefers-color-scheme: dark) {
+@keyframes changeTextColor {
+  from {
+    color: #000;
+    background-color: #fff;
+    transform: translateX(5vw);
+  }
+
+  to {
+    color: #fff;
+    background-color: #000;
+    transform: translateX(72vw);
+  }
+}
+
+@keyframes bil1Animation {
+  0% {
+    top: 0;
+    left: 0;
+  }
+
+  25% {
+    top: 0;
+    left: 20vw;
+  }
+
+  50% {
+    top: 0;
+    left: 30vw;
+  }
+
+  75% {
+    top: 0;
+    left: 60vw;
+  }
+
+  100% {
+    top: 0;
+    left: 80vw;
+  }
+}
+
+.bil1AfterClick {
+  animation-name: bil1Animation;
+  animation-duration: 10s;
+  animation-iteration-count: 1;
+}
+
+@keyframes bil2Animation {
+  0% {
+    top: 0;
+    left: 0;
+  }
+
+  25% {
+    top: 0;
+    left: 15vw;
+  }
+
+  50% {
+    top: 0;
+    left: 40vw;
+  }
+
+  75% {
+    top: 0;
+    left: 65vw;
+  }
+
+  100% {
+    top: 0;
+    left: 80vw;
+  }
+}
+
+.bil2AfterClick {
+  animation-name: bil2Animation;
+  animation-duration: 9s;
+  animation-iteration-count: 1;
+}
+
+@media (prefers-color-scheme: dark) {
   body {
     width: 100vw;
     font-family: Arial, Helvetica, sans-serif;
-    background-color: gray !important;
+    overflow-x: hidden;
+    background-color: #666 !important;
   }
 
   header {
     width: 100vw;
-    margin-top: -2vh;
-    margin-left: -1vw;
+    margin-top: -3vh;
+    margin-left: -2vw;
     background-color: #1a1a1a !important;
   }
 
@@ -145,9 +226,94 @@
     display: block;
     color: #000 !important;
   }
+
+  #animationText {
+    text-align: center;
+    border-radius: 50%;
+    width: -moz-fit-content;
+    width: fit-content;
+    padding: 2%;
+    font-size: 200%;
+    animation-name: changeTextColor;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    position: relative;
+  }
+
+  .buttonDiv {
+    text-align: center;
+    margin-top: 20vh;
+    position: relative;
+  }
+
+  #buttonAnimation {
+    text-align: center;
+    width: 20vw;
+    height: 5vh;
+    font-size: 120%;
+    font-weight: 900;
+    position: relative;
+  }
+
+  #bil1Animation {
+    position: relative;
+  }
+
+  #bil1Animation img {
+    width: 7vw;
+    margin-top: 3vh;
+  }
+
+  #bil2Animation {
+    position: relative;
+  }
+
+  #bil2Animation img {
+    width: 7vw;
+  }
+
+  #allaBilar {
+    background-image: url("bana.dfdd8d34.jpg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 88vw;
+    height: 25vh;
+    margin-left: 5vw;
+    position: relative;
+  }
 }
 
-@media (width >= 1200px) and (width <= 6000px) and (prefers-color-scheme: light) {
+@media (prefers-color-scheme: dark) and (width <= 1025px) {
+  .sassKrav, .hemsidaKrav, .SASS {
+    width: 80vw;
+  }
+
+  .otis {
+    display: none;
+  }
+
+  #bil1Animation {
+    position: relative;
+  }
+
+  #bil1Animation img {
+    width: 7vw;
+    margin-top: 1vh;
+  }
+
+  #bil2Animation {
+    position: relative;
+  }
+
+  #bil2Animation img {
+    width: 7vw;
+    margin-top: -2vh;
+    margin-bottom: 4vh;
+  }
+}
+
+@media (prefers-color-scheme: light) {
   body {
     background-color: #fff;
     width: 100vw;
@@ -247,413 +413,91 @@
     display: block;
     color: #000 !important;
   }
-}
 
-@media (width >= 600px) and (width <= 1199px) and (prefers-color-scheme: dark) {
-  body {
-    width: 100vw;
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: gray !important;
-  }
-
-  header {
-    width: 100vw;
-    margin-top: -2vh;
-    margin-left: -1vw;
-    background-color: #1a1a1a !important;
-  }
-
-  .picGrid {
-    grid-template-rows: repeat(1, 100vh);
-    grid-template-columns: repeat(2, 1fr);
-    justify-content: center;
-    align-items: center;
-    gap: 1vw;
-    width: 82vw;
-    margin: -10% auto -15%;
-    display: none;
-  }
-
-  .picGrid img {
-    object-fit: cover;
-    width: 22vw;
-    height: 60vh;
-    margin: auto;
-    display: block;
-    border: 2px solid #fff !important;
-  }
-
-  .picGrid2 {
-    grid-template-rows: repeat(1, 100vh);
-    grid-template-columns: repeat(2, 1fr);
-    justify-content: center;
-    align-items: center;
-    gap: 1vw;
-    width: 82vw;
-    margin: -10% auto -15%;
-    display: grid;
-  }
-
-  .picGrid2 img {
-    object-fit: cover;
-    width: 40vw;
-    height: 60vh;
-    margin: auto;
-    display: block;
-    border: 2px solid #fff !important;
-  }
-
-  .h1Change {
+  #animationText {
     text-align: center;
-    text-decoration: underline;
-    color: #000 !important;
+    border-radius: 50%;
+    width: -moz-fit-content;
+    width: fit-content;
+    padding: 2%;
+    font-size: 200%;
+    animation-name: changeTextColor;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    position: relative;
   }
 
-  .SASS {
-    width: 50vw;
-    margin: auto;
-  }
-
-  .SASS h1 {
+  .buttonDiv {
     text-align: center;
-    text-decoration: underline;
-    color: #000 !important;
+    margin-top: 20vh;
+    position: relative;
   }
 
-  .SASS p {
-    text-align: left;
-    color: #000 !important;
+  #buttonAnimation {
+    text-align: center;
+    width: 20vw;
+    height: 5vh;
+    font-size: 120%;
+    font-weight: 900;
+    position: relative;
   }
 
-  .hemsidaKrav {
-    text-align: left;
-    width: 50vw;
-    margin: 0 auto;
-    display: block;
-    color: #000 !important;
+  #bil1Animation {
+    position: relative;
   }
 
-  .hemsidaKrav h2 {
-    text-decoration: underline;
-    color: #000 !important;
+  #bil1Animation img {
+    width: 7vw;
+    margin: 0;
   }
 
-  .hemsidaKrav p {
-    color: #000 !important;
+  #bil2Animation {
+    position: relative;
   }
 
-  .sassKrav {
-    text-align: left;
-    width: 50vw;
-    margin: 0 auto;
-    display: block;
-    color: #000 !important;
+  #bil2Animation img {
+    width: 7vw;
+    margin: 0;
+  }
+
+  #allaBilar {
+    background-image: url("bana.dfdd8d34.jpg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 88vw;
+    height: 25vh;
+    margin-left: 5vw;
+    position: relative;
   }
 }
 
-@media (width >= 600px) and (width <= 1199px) and (prefers-color-scheme: light) {
-  body {
-    background-color: #fff;
-    width: 100vw;
-    font-family: Arial, Helvetica, sans-serif;
+@media (prefers-color-scheme: light) and (width <= 1025px) {
+  .sassKrav, .hemsidaKrav, .SASS {
+    width: 80vw;
   }
 
-  header {
-    background-color: bisque;
-    width: 100vw;
-    margin-top: -2vh;
-    margin-left: -1vw;
-  }
-
-  .picGrid {
-    grid-template-rows: repeat(1, 100vh);
-    grid-template-columns: repeat(2, 1fr);
-    justify-content: center;
-    align-items: center;
-    gap: 1vw;
-    width: 82vw;
-    margin: -10% auto -15%;
+  .otis {
     display: none;
   }
 
-  .picGrid img {
-    object-fit: cover;
-    border: 2px solid #000;
-    width: 22vw;
-    height: 60vh;
-    margin: auto;
-    display: block;
+  #bil1Animation {
+    position: relative;
   }
 
-  .picGrid2 {
-    grid-template-rows: repeat(1, 100vh);
-    grid-template-columns: repeat(2, 1fr);
-    justify-content: center;
-    align-items: center;
-    gap: 1vw;
-    width: 82vw;
-    margin: -10% auto -15%;
-    display: grid;
+  #bil1Animation img {
+    width: 7vw;
+    margin-top: 1vh;
   }
 
-  .picGrid2 img {
-    object-fit: cover;
-    border: 2px solid #000;
-    width: 40vw;
-    height: 60vh;
-    margin: auto;
-    display: block;
+  #bil2Animation {
+    position: relative;
   }
 
-  #h1Change {
-    color: #000;
-    text-align: center;
-    text-decoration: underline;
-  }
-
-  .SASS {
-    width: 70vw;
-    margin: auto;
-  }
-
-  .SASS h1 {
-    text-align: center;
-    text-decoration: underline;
-    color: #000 !important;
-  }
-
-  .SASS p {
-    color: #000;
-    text-align: left;
-  }
-
-  #hemsidaKrav {
-    text-align: left;
-    width: 70vw;
-    margin: 0 auto;
-    display: block;
-    color: #000 !important;
-  }
-
-  #hemsidaKrav h2 {
-    color: #000;
-    text-decoration: underline;
-  }
-
-  #hemsidaKrav p {
-    color: #000;
-  }
-
-  #sassKrav {
-    text-align: left;
-    width: 70vw;
-    margin: 0 auto;
-    display: block;
-    color: #000 !important;
-  }
-}
-
-@media (width >= 300px) and (width <= 599px) and (prefers-color-scheme: dark) {
-  body {
-    width: 100vw;
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: gray !important;
-  }
-
-  header {
-    width: 100vw;
+  #bil2Animation img {
+    width: 7vw;
     margin-top: -2vh;
-    margin-left: -1vw;
-    background-color: #1a1a1a !important;
-  }
-
-  .picGrid {
-    grid-template-rows: repeat(1, 100vh);
-    grid-template-columns: repeat(2, 1fr);
-    justify-content: center;
-    align-items: center;
-    gap: 1vw;
-    width: 82vw;
-    margin: -10% auto -15%;
-    display: none;
-  }
-
-  .picGrid img {
-    object-fit: cover;
-    width: 22vw;
-    height: 60vh;
-    margin: auto;
-    display: block;
-    border: 2px solid #fff !important;
-  }
-
-  .picGrid2 {
-    grid-template-rows: repeat(1, 100vh);
-    grid-template-columns: repeat(2, 1fr);
-    justify-content: center;
-    align-items: center;
-    gap: 1vw;
-    width: 82vw;
-    margin: -10% auto -15%;
-    display: grid;
-  }
-
-  .picGrid2 img {
-    object-fit: cover;
-    width: 40vw;
-    height: 60vh;
-    margin: -25vh auto auto;
-    display: block;
-    border: 2px solid #fff !important;
-  }
-
-  .h1Change {
-    text-align: center;
-    text-decoration: underline;
-    color: #000 !important;
-  }
-
-  .SASS {
-    width: 88vw;
-    margin: auto;
-  }
-
-  .SASS h1 {
-    text-align: center;
-    text-decoration: underline;
-    color: #000 !important;
-  }
-
-  .SASS p {
-    text-align: left;
-    color: #000 !important;
-  }
-
-  .hemsidaKrav {
-    text-align: left;
-    width: 88vw;
-    margin: 0 auto;
-    display: block;
-    color: #000 !important;
-  }
-
-  .hemsidaKrav h2 {
-    text-decoration: underline;
-    color: #000 !important;
-  }
-
-  .hemsidaKrav p {
-    color: #000 !important;
-  }
-
-  .sassKrav {
-    text-align: left;
-    width: 88vw;
-    margin: 0 auto;
-    display: block;
-    color: #000 !important;
-  }
-}
-
-@media (width >= 300px) and (width <= 599px) and (prefers-color-scheme: light) {
-  body {
-    background-color: #fff;
-    width: 100vw;
-    font-family: Arial, Helvetica, sans-serif;
-  }
-
-  header {
-    background-color: bisque;
-    width: 100vw;
-    margin-top: -2vh;
-    margin-left: -1vw;
-  }
-
-  .picGrid {
-    grid-template-rows: repeat(1, 100vh);
-    grid-template-columns: repeat(2, 1fr);
-    justify-content: center;
-    align-items: center;
-    gap: 1vw;
-    width: 82vw;
-    margin: -10% auto -15%;
-    display: none;
-  }
-
-  .picGrid img {
-    object-fit: cover;
-    border: 2px solid #000;
-    width: 22vw;
-    height: 60vh;
-    margin: auto;
-    display: block;
-  }
-
-  .picGrid2 {
-    grid-template-rows: repeat(1, 100vh);
-    grid-template-columns: repeat(2, 1fr);
-    justify-content: center;
-    align-items: center;
-    gap: 1vw;
-    width: 82vw;
-    margin: -10% auto -15%;
-    display: grid;
-  }
-
-  .picGrid2 img {
-    object-fit: cover;
-    border: 2px solid #000;
-    width: 40vw;
-    height: 60vh;
-    margin: -25vh auto auto;
-    display: block;
-  }
-
-  #h1Change {
-    color: #000;
-    text-align: center;
-    text-decoration: underline;
-  }
-
-  .SASS {
-    width: 88vw;
-    margin: auto;
-  }
-
-  .SASS h1 {
-    text-align: center;
-    text-decoration: underline;
-    color: #000 !important;
-  }
-
-  .SASS p {
-    color: #000;
-    text-align: left;
-  }
-
-  #hemsidaKrav {
-    text-align: left;
-    width: 88vw;
-    margin: 0 auto;
-    display: block;
-    color: #000 !important;
-  }
-
-  #hemsidaKrav h2 {
-    color: #000;
-    text-decoration: underline;
-  }
-
-  #hemsidaKrav p {
-    color: #000;
-  }
-
-  #sassKrav {
-    text-align: left;
-    width: 88vw;
-    margin: 0 auto;
-    display: block;
-    color: #000 !important;
+    margin-bottom: 4vh;
   }
 }
 

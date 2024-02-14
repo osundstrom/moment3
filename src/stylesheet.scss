@@ -1,149 +1,52 @@
 
 
-/*------------------------_nav.scss------------------------------------------*/
+/*------------------------@use------------------------------------------*/
 @use "nav";
+@use "animation";
+@use "variabels";
+@use "mixin";
 
-
-
-/*------------------------Grid 1x2------------------------------------------*/
-
-
-
-@mixin grid1x2 {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(1, 100vh);
-  width: 82vw;
-  margin: -10% auto -15% auto;
-  align-items: center;
-  justify-content: center;
-  gap: 1vw;
-
-}
-
-
-
-
-/*------------------------Images/size------------------------------------------*/
-@mixin imageDark ($imageWidth: 22vw){
-    height: 60vh;
-    object-fit: cover;
-    margin: auto;
-    display: block;
-    border: 2px solid $borderdark-color !important;
-
-  @if $imageWidth < 40vw {
-    width: $imageWidth;
-  } @else {
-    width: 40vw;
-  }
-}
-
-@mixin imageLight ($imageWidth: 22vw){
-  height: 60vh;
-  object-fit: cover;
-  margin: auto;
-  display: block;
-  border: 2px solid $border-color;
-
-@if $imageWidth < 40vw {
-  width: $imageWidth;
-} @else {
-  width: 40vw;
-}
-}
-
-
-/*------------------------h1------------------------------------------*/
-@mixin h1Change {
-  color: $text-color !important;
-    text-align: center;
-    text-decoration: underline;
-}
-
-/*------------------------Krav texter------------------------------------------*/
-@mixin hemsidaText{
-  text-align: left;
-    width: 50vw;
-    margin: 0 auto;
-    color: $text-color !important;
-    display: block;
-}
-
-
-
-
-/*------------------------------------------------------------------*/
-/*------------------------------------------------------------------*/
-/*------------------------------------------------------------------*/
-/*------------------------------------------------------------------*/
-/*------------------------------------------------------------------*/
-
-
-/*Mörkt tema*/
-$dark-color: #333;
-$darktheme-background: lighten($dark-color, 30%);
-$headerbgdark-color: darken($dark-color, 10%);
-$hooverdark-color: lighten($dark-color, 60%);
-$textdark-color: lighten($dark-color, 90%);
-$borderdark-color: lighten($dark-color, 100%);
-
-
-/*Ljust tema*/
-$light-color: #fff;
-$lighttheme-background: $light-color;
-$headerbg-color: bisque;
-$text-color: darken($light-color, 100%);
-$border-color: darken($light-color, 100%);
-
-/*Font*/
-$font-style: Arial, Helvetica, sans-serif;
-
-
-
-
-@media (min-width: 1200px) and (max-width:6000px) {
 
 /*------------------------Dark------------------------------------------*/
-
 
 @media (prefers-color-scheme:dark) {
 
   body {
-    background-color: $darktheme-background !important;
-    font-family: $font-style;
+    background-color: variabels.$darktheme-background !important;
+    font-family: variabels.$font-style;
     width: 100vw;
+    overflow-x: hidden;
   }
   header {
-    background-color: $headerbgdark-color !important;
+    background-color: variabels.$headerbgdark-color !important;
     width: 100vw;
-    margin-left: -1vw;
-    margin-top: -2vh;
+    margin-left: -2vw;
+    margin-top: -3vh;
   }
 
 /*----------------------Bilder grids--------------------------------------------*/
 .picGrid {
-  @include grid1x2;
+  @include mixin.grid1x2;
   
 
   img {
-    @include imageDark;
+    @include mixin.imageDark;
 }
 }
 
 .picGrid2 {
-  @include grid1x2;
+  @include mixin.grid1x2;
   
 
   img {
-    @include imageDark (50vw);
+    @include mixin.imageDark (50vw);
     
 }
 }
 
 /*------------------------h1------------------------------------------*/
 .h1Change{
-  @include h1Change;
+  @include mixin.h1Change;
 }
 
 /*------------------------SASS------------------------------------------*/
@@ -152,35 +55,155 @@ $font-style: Arial, Helvetica, sans-serif;
   margin: auto;
 
   h1{
-    @include h1Change;
+    @include mixin.h1Change;
   }
 
   p{
-    color: $text-color !important;
+    color: variabels.$text-color !important;
     text-align: left;
   }
 }
 
 /*------------------------Krav------------------------------------------*/
 .hemsidaKrav {
-  @include hemsidaText;
+  @include mixin.hemsidaText;
 
   h2{
-    color: $text-color !important;
+    color: variabels.$text-color !important;
     text-decoration: underline;
   }
 
   p{
-    color: $text-color !important;
+    color: variabels.$text-color !important;
   }
 }
 
 
 .sassKrav {
-  @include hemsidaText;
+  @include mixin.hemsidaText;
 
 }
+
+/*------------------------Animationer Text------------------------------------------*/
+  
+#animationText {
+  text-align: center;
+  width: fit-content;
+  font-size: 200%;
+  animation-name: changeTextColor;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  border-radius: 50%;
+  padding: 2%;
+  position: relative;
+
 }
+
+
+/*------------------------Animationer Knapp------------------------------------------*/
+
+.buttonDiv{
+  text-align: center;
+  margin-top: 20vh;
+  position: relative;
+ 
+}
+
+#buttonAnimation {
+  text-align: center;
+  height: 5vh;
+  width: 20vw;
+  font-weight: 900;
+  font-size: 120%;
+  position: relative;
+  
+}
+
+
+/*------------------------Animationer race------------------------------------------*/
+
+
+
+#bil1Animation {
+    img{
+      width: 7vw;
+      margin-top: 3vh;
+      
+    }
+  position: relative;
+  
+  
+ }
+ 
+ #bil2Animation{
+  img{
+    width: 7vw;
+  }
+   position: relative;
+  
+ }
+
+ #allaBilar {
+  background-image: url(/bilder/bana.jpg);
+  background-repeat:no-repeat;
+  background-size:contain;
+  height: 25vh;
+  width: 88vw;
+  position: relative;
+  margin-left: 5vw;
+  
+
+ }
+
+
+
+ /*------------------------Media------------------------------------------*/
+ /*------------------------Media------------------------------------------*/
+ /*------------------------Media------------------------------------------*/
+ /*------------------------Media------------------------------------------*/
+ /*------------------------Media------------------------------------------*/
+@media (max-width:1025) {
+
+ .sassKrav {
+  width: 80vw;
+ }
+  
+ .hemsidaKrav{
+  width: 80vw;
+ }
+
+ .SASS{
+  width: 80vw;
+ }
+ .otis{
+  display: none;
+ }
+
+ #bil1Animation {
+  img{
+    width: 7vw;
+    margin-top: 1vh;
+  }
+position: relative;
+
+
+}
+
+#bil2Animation{
+img{
+  width: 7vw;
+  margin-bottom: 4vh;
+  margin-top: -2vh;
+  
+}
+ position: relative;
+ 
+}
+ }
+
+}
+
 
 
  /*------------------------Light------------------------------------------*/
@@ -189,40 +212,42 @@ $font-style: Arial, Helvetica, sans-serif;
 @media (prefers-color-scheme:light) {
 
   body {
-    background-color: $lighttheme-background;
-    font-family: $font-style;
+    background-color: variabels.$lighttheme-background;
+    font-family: variabels.$font-style;
     width: 100vw;
   }
   header {
-    background-color: $headerbg-color;
+    background-color: variabels.$headerbg-color;
     width: 100vw;
     margin-left: -1vw;
     margin-top: -2vh;
   }
 
+
+
 /*----------------------Bilder grids--------------------------------------------*/
 .picGrid {
-  @include grid1x2;
+  @include mixin.grid1x2;
   
 
   img {
-    @include imageLight;
+    @include mixin.imageLight;
 }
 }
 
 .picGrid2 {
-  @include grid1x2;
+  @include mixin.grid1x2;
   
 
   img {
-    @include imageLight (50vw);
+    @include mixin.imageLight (50vw);
     
 }
 }
 
 /*------------------------h1------------------------------------------*/
 #h1Change{
-  @include h1Change;
+  @include mixin.h1Change;
 }
 
 /*------------------------SASS------------------------------------------*/
@@ -231,11 +256,11 @@ $font-style: Arial, Helvetica, sans-serif;
   margin: auto;
 
   h1{
-    @include h1Change;
+    @include mixin.h1Change;
   }
 
   p{
-    color: $text-color;
+    color: variabels.$text-color;
     text-align: left;
   }
 }
@@ -243,376 +268,148 @@ $font-style: Arial, Helvetica, sans-serif;
 /*------------------------Krav------------------------------------------*/
 
 #hemsidaKrav {
-  @include hemsidaText;
+  @include mixin.hemsidaText;
 
   h2{
-    color: $text-color;
+    color: variabels.$text-color;
     text-decoration: underline;
   }
 
   p{
-    color: $text-color;
+    color: variabels.$text-color;
   }
 }
 
 
 #sassKrav {
-  @include hemsidaText;
+  @include mixin.hemsidaText;
 
 }
 
+
+/*------------------------Animationer Text------------------------------------------*/
+  
+#animationText {
+  text-align: center;
+  width: fit-content;
+  font-size: 200%;
+  animation-name: changeTextColor;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  border-radius: 50%;
+  padding: 2%;
+  position: relative;
+
 }
-  
-}  
 
-/*------------------------------------------------------------------*/
-/*------------------------------------------------------------------*/
-/*------------------------------------------------------------------*/
-/*------------------------------------------------------------------*/
-/*------------------------------------------------------------------*/
 
-@media (min-width: 600) and (max-width:1199) {
+/*------------------------Animationer Knapp------------------------------------------*/
 
-  /*------------------------Dark------------------------------------------*/
+.buttonDiv{
+  text-align: center;
+  margin-top: 20vh;
+  position: relative;
+ 
+}
+
+#buttonAnimation {
+  text-align: center;
+  height: 5vh;
+  width: 20vw;
+  font-weight: 900;
+  font-size: 120%;
+  position: relative;
   
-  
-  @media (prefers-color-scheme:dark) {
-  
-    body {
-      background-color: $darktheme-background !important;
-      font-family: $font-style;
-      width: 100vw;
-    }
-    header {
-      background-color: $headerbgdark-color !important;
-      width: 100vw;
-      margin-left: -1vw;
-      margin-top: -2vh;
-    }
-  
-  /*----------------------Bilder grids--------------------------------------------*/
-  .picGrid {
-    @include grid1x2;
-    display: none;
-    
-  
-    img {
-      @include imageDark;
-  }
-  }
-  
-  .picGrid2 {
-    @include grid1x2;
-    
-  
-    img {
-      @include imageDark (50vw);
+}
+
+
+/*------------------------Animationer race------------------------------------------*/
+
+
+
+#bil1Animation {
+    img{
+      width: 7vw;
+      margin: 0;
       
-  }
-  }
-  
-  /*------------------------h1------------------------------------------*/
-  .h1Change{
-    @include h1Change;
-  }
-  
-  /*------------------------SASS------------------------------------------*/
-  .SASS {
-    width: 50vw;
-    margin: auto;
-  
-    h1{
-      @include h1Change;
     }
+  position: relative;
   
-    p{
-      color: $text-color !important;
-      text-align: left;
-    }
+ }
+ 
+ #bil2Animation{
+  img{
+    width: 7vw;
+    margin: 0;
   }
+   position: relative;;
+ }
+
+ #allaBilar {
+  background-image: url(/bilder/bana.jpg);
+  background-repeat:no-repeat;
+  background-size:contain;
+  height: 25vh;
+  width: 88vw;
+  position: relative;
+  margin-left: 5vw;
   
-  /*------------------------Krav------------------------------------------*/
-  .hemsidaKrav {
-    @include hemsidaText;
-  
-    h2{
-      color: $text-color !important;
-      text-decoration: underline;
-    }
-  
-    p{
-      color: $text-color !important;
-    }
-  }
-  
-  
+
+ }
+
+
+ 
+/*------------------------Media------------------------------------------*/
+ /*------------------------Media------------------------------------------*/
+ /*------------------------Media------------------------------------------*/
+ /*------------------------Media------------------------------------------*/
+ /*------------------------Media------------------------------------------*/
+ @media (max-width:1025) {
+
   .sassKrav {
-    @include hemsidaText;
-  
+   width: 80vw;
   }
-  
+   
+  .hemsidaKrav{
+   width: 80vw;
   }
-  
-  
-   /*------------------------Light------------------------------------------*/
-  
-  
-  @media (prefers-color-scheme:light) {
-  
-    body {
-      background-color: $lighttheme-background;
-      font-family: $font-style;
-      width: 100vw;
-    }
-    header {
-      background-color: $headerbg-color;
-      width: 100vw;
-      margin-left: -1vw;
-      margin-top: -2vh;
-    }
-  
-  /*----------------------Bilder grids--------------------------------------------*/
-  .picGrid {
-    @include grid1x2;
-    display: none;
-    
-  
-    img {
-      @include imageLight;
+ 
+  .SASS{
+   width: 80vw;
   }
+  .otis{
+   display: none;
   }
+ 
+  #bil1Animation {
+   img{
+     width: 7vw;
+     margin-top: 1vh;
+   }
+ position: relative;
+ 
+ 
+ }
+ 
+ #bil2Animation{
+ img{
+   width: 7vw;
+   margin-bottom: 4vh;
+   margin-top: -2vh;
+   
+ }
+  position: relative;
   
-  .picGrid2 {
-    @include grid1x2;
-    
-  
-    img {
-      @include imageLight (50vw);
-      
+ }
   }
-  }
-  
-  /*------------------------h1------------------------------------------*/
-  #h1Change{
-    color: $text-color;
-      text-align: center;
-      text-decoration: underline;
-  }
-  
-  /*------------------------SASS------------------------------------------*/
-  .SASS {
-    width: 70vw;
-    margin: auto;
-  
-    h1{
-      @include h1Change;
-    }
-  
-    p{
-      color: $text-color;
-      text-align: left;
-    }
-  }
-  
-  /*------------------------Krav------------------------------------------*/
-  
-  #hemsidaKrav {
-    @include hemsidaText;
-    width: 70vw;
-  
-    h2{
-      color: $text-color;
-      text-decoration: underline;
-    }
-  
-    p{
-      color: $text-color;
-    }
-  }
-  
-  #sassKrav {
-    @include hemsidaText;
-    width: 70vw;
-  
-  }
-  } 
-  }  
+ 
+ }
+ 
+ 
+
+ 
 
 
-  /*------------------------------------------------------------------*/
-/*------------------------------------------------------------------*/
-/*------------------------------------------------------------------*/
-/*------------------------------------------------------------------*/
-/*------------------------------------------------------------------*/
+  
 
-@media (min-width: 300) and (max-width:599) {
-
-  /*------------------------Dark------------------------------------------*/
-  
-  
-  @media (prefers-color-scheme:dark) {
-  
-    body {
-      background-color: $darktheme-background !important;
-      font-family: $font-style;
-      width: 100vw;
-    }
-    header {
-      background-color: $headerbgdark-color !important;
-      width: 100vw;
-      margin-left: -1vw;
-      margin-top: -2vh;
-    }
-  
-  /*----------------------Bilder grids--------------------------------------------*/
-  .picGrid {
-    @include grid1x2;
-    display: none;
-    
-  
-    img {
-      @include imageDark;
-  }
-  }
-  
-  .picGrid2 {
-    @include grid1x2;
-    
-    
-  
-    img {
-      @include imageDark (50vw);
-      margin-top: -25vh;
-      
-  }
-  }
-  
-  /*------------------------h1------------------------------------------*/
-  .h1Change{
-    @include h1Change;
-  }
-  
-  /*------------------------SASS------------------------------------------*/
-  .SASS {
-    width: 88vw;
-    margin: auto;
-  
-    h1{
-      @include h1Change;
-    }
-  
-    p{
-      color: $text-color !important;
-      text-align: left;
-    }
-  }
-  
-  /*------------------------Krav------------------------------------------*/
-  .hemsidaKrav {
-    @include hemsidaText;
-    width: 88vw;
-  
-    h2{
-      color: $text-color !important;
-      text-decoration: underline;
-    }
-  
-    p{
-      color: $text-color !important;
-    }
-  }
-  
-  
-  .sassKrav {
-    @include hemsidaText;
-    width: 88vw;
-  
-  }
-  
-  }
-  
-  
-   /*------------------------Light------------------------------------------*/
-  
-  
-  @media (prefers-color-scheme:light) {
-  
-    body {
-      background-color: $lighttheme-background;
-      font-family: $font-style;
-      width: 100vw;
-    }
-    header {
-      background-color: $headerbg-color;
-      width: 100vw;
-      margin-left: -1vw;
-      margin-top: -2vh;
-    }
-  
-  /*----------------------Bilder grids--------------------------------------------*/
-  .picGrid {
-    @include grid1x2;
-    display: none;
-    
-  
-    img {
-      @include imageLight;
-  }
-  }
-  
-  .picGrid2 {
-    @include grid1x2;
-    
-  
-    img {
-      @include imageLight (50vw);
-      margin-top: -25vh;
-      
-  }
-  }
-  
-  /*------------------------h1------------------------------------------*/
-  #h1Change{
-    color: $text-color;
-      text-align: center;
-      text-decoration: underline;
-  }
-  
-  /*------------------------SASS------------------------------------------*/
-  .SASS {
-    width: 88vw;
-    margin: auto;
-  
-    h1{
-      @include h1Change;
-    }
-  
-    p{
-      color: $text-color;
-      text-align: left;
-    }
-  }
-  
-  /*------------------------Krav------------------------------------------*/
-  
-  #hemsidaKrav {
-    @include hemsidaText;
-    width: 88vw;
-  
-    h2{
-      color: $text-color;
-      text-decoration: underline;
-    }
-  
-    p{
-      color: $text-color;
-    }
-  }
-  
-  #sassKrav {
-    @include hemsidaText;
-    width: 88vw;
-  
-  }
-  } 
-  }  
