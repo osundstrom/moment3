@@ -1,14 +1,17 @@
+
+/*-----------------------Text animering------------------------------------------------*/
+
 @keyframes changeTextColor {
     from {
         color: black;
         background-color: white;
-        transform: translateX(0);
+        transform: translateX(5vw);
     }
 
     to {
         color: white;
         background-color: black;
-        transform: translateX(67vw);
+        transform: translateX(72vw);
     }
 
 }

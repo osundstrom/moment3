@@ -15,12 +15,13 @@
     background-color: variabels.$darktheme-background !important;
     font-family: variabels.$font-style;
     width: 100vw;
+    overflow-x: hidden;
   }
   header {
     background-color: variabels.$headerbgdark-color !important;
     width: 100vw;
-    margin-left: -1vw;
-    margin-top: -2vh;
+    margin-left: -2vw;
+    margin-top: -3vh;
   }
 
 /*----------------------Bilder grids--------------------------------------------*/
@@ -82,7 +83,127 @@
   @include mixin.hemsidaText;
 
 }
+
+/*------------------------Animationer Text------------------------------------------*/
+  
+#animationText {
+  text-align: center;
+  width: fit-content;
+  font-size: 200%;
+  animation-name: changeTextColor;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  border-radius: 50%;
+  padding: 2%;
+  position: relative;
+
 }
+
+
+/*------------------------Animationer Knapp------------------------------------------*/
+
+.buttonDiv{
+  text-align: center;
+  margin-top: 20vh;
+  position: relative;
+ 
+}
+
+#buttonAnimation {
+  text-align: center;
+  height: 5vh;
+  width: 20vw;
+  font-weight: 900;
+  font-size: 120%;
+  position: relative;
+  
+}
+
+
+/*------------------------Animationer race------------------------------------------*/
+
+
+
+#bil1Animation {
+    img{
+      width: 7vw;
+      margin-top: 3vh;
+      
+    }
+  position: relative;
+  
+  
+ }
+ 
+ #bil2Animation{
+  img{
+    width: 7vw;
+  }
+   position: relative;
+  
+ }
+
+ #allaBilar {
+  background-image: url(/bilder/bana.jpg);
+  background-repeat:no-repeat;
+  background-size:contain;
+  height: 25vh;
+  width: 88vw;
+  position: relative;
+  margin-left: 5vw;
+  
+
+ }
+
+
+
+ /*------------------------Media------------------------------------------*/
+ /*------------------------Media------------------------------------------*/
+ /*------------------------Media------------------------------------------*/
+ /*------------------------Media------------------------------------------*/
+ /*------------------------Media------------------------------------------*/
+@media (max-width:1025) {
+
+ .sassKrav {
+  width: 80vw;
+ }
+  
+ .hemsidaKrav{
+  width: 80vw;
+ }
+
+ .SASS{
+  width: 80vw;
+ }
+ .otis{
+  display: none;
+ }
+
+ #bil1Animation {
+  img{
+    width: 7vw;
+    margin-top: 1vh;
+  }
+position: relative;
+
+
+}
+
+#bil2Animation{
+img{
+  width: 7vw;
+  margin-bottom: 4vh;
+  margin-top: -2vh;
+  
+}
+ position: relative;
+ 
+}
+ }
+
+}
+
 
 
  /*------------------------Light------------------------------------------*/
@@ -101,6 +222,8 @@
     margin-left: -1vw;
     margin-top: -2vh;
   }
+
+
 
 /*----------------------Bilder grids--------------------------------------------*/
 .picGrid {
@@ -161,67 +284,132 @@
 #sassKrav {
   @include mixin.hemsidaText;
 
-}}
+}
+
 
 /*------------------------Animationer Text------------------------------------------*/
   
-  #animationText {
-    text-align: center;
-    width: fit-content;
-    font-size: 400%;
-    animation-name: changeTextColor;
-    animation-duration: 2s;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
-    border-radius: 50%;
-    padding: 2%;
-    position: relative;
-  
-  }
-  
-  
-  /*------------------------Animationer Knapp------------------------------------------*/
+#animationText {
+  text-align: center;
+  width: fit-content;
+  font-size: 200%;
+  animation-name: changeTextColor;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  border-radius: 50%;
+  padding: 2%;
+  position: relative;
 
-  .buttonDiv{
-    text-align: center;
-    margin-top: 10vh;
-  }
-  
-  #buttonAnimation {
-    text-align: center;
-    height: 5vh;
-    width: 10vw;
-    font-weight: 900;
-    font-size: 120%;
-    
-  }
+}
 
 
-  /*------------------------Animationer race------------------------------------------*/
+/*------------------------Animationer Knapp------------------------------------------*/
+
+.buttonDiv{
+  text-align: center;
+  margin-top: 20vh;
+  position: relative;
+ 
+}
+
+#buttonAnimation {
+  text-align: center;
+  height: 5vh;
+  width: 20vw;
+  font-weight: 900;
+  font-size: 120%;
+  position: relative;
   
-  #allaBilar img {
-    width: 100px;
-    position: relative;
+}
+
+
+/*------------------------Animationer race------------------------------------------*/
+
+
+
+#bil1Animation {
+    img{
+      width: 7vw;
+      margin: 0;
+      
+    }
+  position: relative;
+  
+ }
+ 
+ #bil2Animation{
+  img{
+    width: 7vw;
+    margin: 0;
   }
+   position: relative;;
+ }
+
+ #allaBilar {
+  background-image: url(/bilder/bana.jpg);
+  background-repeat:no-repeat;
+  background-size:contain;
+  height: 25vh;
+  width: 88vw;
+  position: relative;
+  margin-left: 5vw;
   
-  
-  #bil1Animation {
-    position: relative;
-    margin-left: 6vw;
-   }
+
+ }
+
+
+ 
+/*------------------------Media------------------------------------------*/
+ /*------------------------Media------------------------------------------*/
+ /*------------------------Media------------------------------------------*/
+ /*------------------------Media------------------------------------------*/
+ /*------------------------Media------------------------------------------*/
+ @media (max-width:1025) {
+
+  .sassKrav {
+   width: 80vw;
+  }
    
-   #bil2Animation{
-     position: relative;
-     margin-left: 6vw;
+  .hemsidaKrav{
+   width: 80vw;
+  }
+ 
+  .SASS{
+   width: 80vw;
+  }
+  .otis{
+   display: none;
+  }
+ 
+  #bil1Animation {
+   img{
+     width: 7vw;
+     margin-top: 1vh;
    }
+ position: relative;
+ 
+ 
+ }
+ 
+ #bil2Animation{
+ img{
+   width: 7vw;
+   margin-bottom: 4vh;
+   margin-top: -2vh;
+   
+ }
+  position: relative;
   
-  
-   #bilBanaDiv img{
-      width: 88vw;
-      position: absolute;
-      margin-top: -6vh;
-      margin-left: 5vw;
-   }
-  
+ }
+  }
+ 
+ }
+ 
+ 
+
+ 
+
+
   
 

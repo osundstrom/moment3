@@ -49,13 +49,13 @@
   from {
     color: #000;
     background-color: #fff;
-    transform: translateX(0);
+    transform: translateX(5vw);
   }
 
   to {
     color: #fff;
     background-color: #000;
-    transform: translateX(67vw);
+    transform: translateX(72vw);
   }
 }
 
@@ -129,13 +129,14 @@
   body {
     width: 100vw;
     font-family: Arial, Helvetica, sans-serif;
+    overflow-x: hidden;
     background-color: #666 !important;
   }
 
   header {
     width: 100vw;
-    margin-top: -2vh;
-    margin-left: -1vw;
+    margin-top: -3vh;
+    margin-left: -2vw;
     background-color: #1a1a1a !important;
   }
 
@@ -224,6 +225,91 @@
     margin: 0 auto;
     display: block;
     color: #000 !important;
+  }
+
+  #animationText {
+    text-align: center;
+    border-radius: 50%;
+    width: -moz-fit-content;
+    width: fit-content;
+    padding: 2%;
+    font-size: 200%;
+    animation-name: changeTextColor;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    position: relative;
+  }
+
+  .buttonDiv {
+    text-align: center;
+    margin-top: 20vh;
+    position: relative;
+  }
+
+  #buttonAnimation {
+    text-align: center;
+    width: 20vw;
+    height: 5vh;
+    font-size: 120%;
+    font-weight: 900;
+    position: relative;
+  }
+
+  #bil1Animation {
+    position: relative;
+  }
+
+  #bil1Animation img {
+    width: 7vw;
+    margin-top: 3vh;
+  }
+
+  #bil2Animation {
+    position: relative;
+  }
+
+  #bil2Animation img {
+    width: 7vw;
+  }
+
+  #allaBilar {
+    background-image: url("bana.dfdd8d34.jpg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 88vw;
+    height: 25vh;
+    margin-left: 5vw;
+    position: relative;
+  }
+}
+
+@media (prefers-color-scheme: dark) and (width <= 1025px) {
+  .sassKrav, .hemsidaKrav, .SASS {
+    width: 80vw;
+  }
+
+  .otis {
+    display: none;
+  }
+
+  #bil1Animation {
+    position: relative;
+  }
+
+  #bil1Animation img {
+    width: 7vw;
+    margin-top: 1vh;
+  }
+
+  #bil2Animation {
+    position: relative;
+  }
+
+  #bil2Animation img {
+    width: 7vw;
+    margin-top: -2vh;
+    margin-bottom: 4vh;
   }
 }
 
@@ -327,50 +413,92 @@
     display: block;
     color: #000 !important;
   }
+
+  #animationText {
+    text-align: center;
+    border-radius: 50%;
+    width: -moz-fit-content;
+    width: fit-content;
+    padding: 2%;
+    font-size: 200%;
+    animation-name: changeTextColor;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    position: relative;
+  }
+
+  .buttonDiv {
+    text-align: center;
+    margin-top: 20vh;
+    position: relative;
+  }
+
+  #buttonAnimation {
+    text-align: center;
+    width: 20vw;
+    height: 5vh;
+    font-size: 120%;
+    font-weight: 900;
+    position: relative;
+  }
+
+  #bil1Animation {
+    position: relative;
+  }
+
+  #bil1Animation img {
+    width: 7vw;
+    margin: 0;
+  }
+
+  #bil2Animation {
+    position: relative;
+  }
+
+  #bil2Animation img {
+    width: 7vw;
+    margin: 0;
+  }
+
+  #allaBilar {
+    background-image: url("bana.dfdd8d34.jpg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 88vw;
+    height: 25vh;
+    margin-left: 5vw;
+    position: relative;
+  }
 }
 
-#animationText {
-  text-align: center;
-  border-radius: 50%;
-  width: -moz-fit-content;
-  width: fit-content;
-  padding: 2%;
-  font-size: 400%;
-  animation-name: changeTextColor;
-  animation-duration: 2s;
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
-  position: relative;
-}
+@media (prefers-color-scheme: light) and (width <= 1025px) {
+  .sassKrav, .hemsidaKrav, .SASS {
+    width: 80vw;
+  }
 
-.buttonDiv {
-  text-align: center;
-  margin-top: 10vh;
-}
+  .otis {
+    display: none;
+  }
 
-#buttonAnimation {
-  text-align: center;
-  width: 10vw;
-  height: 5vh;
-  font-size: 120%;
-  font-weight: 900;
-}
+  #bil1Animation {
+    position: relative;
+  }
 
-#allaBilar img {
-  width: 100px;
-  position: relative;
-}
+  #bil1Animation img {
+    width: 7vw;
+    margin-top: 1vh;
+  }
 
-#bil1Animation, #bil2Animation {
-  margin-left: 6vw;
-  position: relative;
-}
+  #bil2Animation {
+    position: relative;
+  }
 
-#bilBanaDiv img {
-  width: 88vw;
-  margin-top: -6vh;
-  margin-left: 5vw;
-  position: absolute;
+  #bil2Animation img {
+    width: 7vw;
+    margin-top: -2vh;
+    margin-bottom: 4vh;
+  }
 }
 
 /*# sourceMappingURL=index.ff312cca.css.map */
