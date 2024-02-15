@@ -5,3 +5,9 @@ document.getElementById("buttonAnimation").addEventListener("click", function() 
     document.getElementById("bil2Animation").classList.toggle("bil2AfterClick");
 
 });
+
+
+document.getElementById("buttonAnimation").addEventListener("click", function() {
+    document.getElementById("buttonAnimation").classList.toggle("spinningOnClick");
+    
+})
