@@ -491,7 +491,7 @@
 
   .buttonDiv {
     text-align: center;
-    margin-top: 0;
+    margin-top: 2vh;
     padding-bottom: 50vh;
     position: relative;
   }
@@ -512,7 +512,7 @@
 
   #bil1Animation img {
     width: 7vw;
-    margin: 0;
+    margin-top: 3vh;
   }
 
   #bil2Animation {
@@ -521,7 +521,6 @@
 
   #bil2Animation img {
     width: 7vw;
-    margin: 0;
   }
 
   #allaBilar {
