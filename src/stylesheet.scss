@@ -224,8 +224,9 @@ img{
   }
   header {
     background-color: variabels.$headerbg-color;
-    width: 100vw;
-    margin-left: -1vw;
+    width: 110vw;
+    height: 8vh;
+    margin-left: -2vw;
     margin-top: -2vh;
   }
 
@@ -297,8 +298,8 @@ img{
   
 #animationText {
   text-align: center;
-  width: fit-content;
-  font-size: 200%;
+  width: 15vw;
+  font-size: 130%;
   animation-name: changeTextColor;
   animation-duration: 2s;
   animation-iteration-count: infinite;
@@ -306,6 +307,7 @@ img{
   border-radius: 50%;
   padding: 2%;
   position: relative;
+  animation-timing-function: linear;
 
 }
 
@@ -314,8 +316,9 @@ img{
 
 .buttonDiv{
   text-align: center;
-  margin-top: 20vh;
+  margin-top: 0vh;
   position: relative;
+  padding-bottom: 50vh;
  
 }
 
@@ -324,8 +327,9 @@ img{
   height: 5vh;
   width: 20vw;
   font-weight: 900;
-  font-size: 120%;
+  font-size: 100%;
   position: relative;
+  background-color: green;
   
 }
 
