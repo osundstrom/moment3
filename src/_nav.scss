@@ -13,9 +13,12 @@
   
   
     nav {
+      
       ul {
         padding: 1%;
         list-style: none;
+        
+        
       }
     
       li { 
@@ -28,6 +31,8 @@
         padding: 6px 12px;
         text-decoration: none;
         color: variabels.$textdark-color !important;
+        
+        
       }
   
       a:hover{
@@ -52,6 +57,7 @@
       ul {
         padding: 1%;
         list-style: none;
+        margin-left: 1vw;
       }
     
       li { 

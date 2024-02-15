@@ -19,9 +19,10 @@
   }
   header {
     background-color: variabels.$headerbgdark-color !important;
-    width: 100vw;
+    width: 110vw;
+    height: 8vh;
     margin-left: -2vw;
-    margin-top: -3vh;
+    margin-top: -2vh;
   }
 
 /*----------------------Bilder grids--------------------------------------------*/
@@ -88,15 +89,17 @@
   
 #animationText {
   text-align: center;
-  width: fit-content;
-  font-size: 200%;
+  width: 15vw;
+  padding: 2%;
+  font-size: 130%;
   animation-name: changeTextColor;
   animation-duration: 2s;
   animation-iteration-count: infinite;
   animation-direction: alternate;
   border-radius: 50%;
-  padding: 2%;
   position: relative;
+  animation-timing-function: linear;
+  
 
 }
 
@@ -105,8 +108,9 @@
 
 .buttonDiv{
   text-align: center;
-  margin-top: 20vh;
+  margin-top: 0vh;
   position: relative;
+  padding-bottom: 50vh;
  
 }
 
@@ -115,8 +119,9 @@
   height: 5vh;
   width: fit-content;
   font-weight: 900;
-  font-size: 120%;
+  font-size: 100%;
   position: relative;
+  background-color: green;
   
 }
 
@@ -155,6 +160,7 @@
   
 
  }
+
 
 
 
@@ -218,8 +224,9 @@ img{
   }
   header {
     background-color: variabels.$headerbg-color;
-    width: 100vw;
-    margin-left: -1vw;
+    width: 110vw;
+    height: 8vh;
+    margin-left: -2vw;
     margin-top: -2vh;
   }
 
@@ -291,8 +298,8 @@ img{
   
 #animationText {
   text-align: center;
-  width: fit-content;
-  font-size: 200%;
+  width: 15vw;
+  font-size: 130%;
   animation-name: changeTextColor;
   animation-duration: 2s;
   animation-iteration-count: infinite;
@@ -300,6 +307,7 @@ img{
   border-radius: 50%;
   padding: 2%;
   position: relative;
+  animation-timing-function: linear;
 
 }
 
@@ -308,8 +316,9 @@ img{
 
 .buttonDiv{
   text-align: center;
-  margin-top: 20vh;
+  margin-top: 2vh;
   position: relative;
+  padding-bottom: 50vh;
  
 }
 
@@ -318,8 +327,9 @@ img{
   height: 5vh;
   width: fit-content;
   font-weight: 900;
-  font-size: 120%;
+  font-size: 100%;
   position: relative;
+  background-color: green;
   
 }
 
@@ -329,34 +339,36 @@ img{
 
 
 #bil1Animation {
-    img{
-      width: 7vw;
-      margin: 0;
-      
-    }
-  position: relative;
-  
- }
- 
- #bil2Animation{
   img{
     width: 7vw;
-    margin: 0;
+    margin-top: 3vh;
+    
   }
-   position: relative;;
- }
+position: relative;
 
- #allaBilar {
-  background-image: url(/bilder/bana.jpg);
-  background-repeat:no-repeat;
-  background-size:contain;
-  height: 25vh;
-  width: 88vw;
-  position: relative;
-  margin-left: 5vw;
-  
 
- }
+}
+
+#bil2Animation{
+img{
+  width: 7vw;
+}
+ position: relative;
+
+}
+
+#allaBilar {
+background-image: url(/bilder/bana.jpg);
+background-repeat:no-repeat;
+background-size:contain;
+height: 25vh;
+width: 88vw;
+position: relative;
+margin-left: 5vw;
+
+
+}
+
 
 
  
