@@ -343,6 +343,16 @@
     margin-left: 5vw;
     position: relative;
   }
+
+  #divDiagramOne {
+    background-color: #faebd7;
+    width: 60vw;
+    height: -moz-fit-content;
+    height: fit-content;
+    margin: auto;
+    position: relative;
+    top: 10vh;
+  }
 }
 
 @media (prefers-color-scheme: dark) and (width <= 1025px) {
