@@ -1,10 +1,10 @@
 
 
 /*------------------------@use------------------------------------------*/
-@use "nav";
-@use "animation";
-@use "variabels";
-@use "mixin";
+@use "partials/nav";
+@use "partials/animation";
+@use "partials/variabels";
+@use "partials/mixin";
 
 
 /*------------------------Dark------------------------------------------*/
@@ -117,7 +117,7 @@
 #buttonAnimation {
   text-align: center;
   height: 5vh;
-  width: 20vw;
+  width: fit-content;
   font-weight: 900;
   font-size: 100%;
   position: relative;
@@ -325,7 +325,7 @@ img{
 #buttonAnimation {
   text-align: center;
   height: 5vh;
-  width: 20vw;
+  width: fit-content;
   font-weight: 900;
   font-size: 100%;
   position: relative;

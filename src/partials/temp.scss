@@ -1,0 +1,348 @@
+
+
+
+@media (min-width: 600) and (max-width:1199) {
+
+    /*------------------------Dark------------------------------------------*/
+    
+    
+    @media (prefers-color-scheme:dark) {
+    
+      body {
+        background-color: $darktheme-background !important;
+        font-family: $font-style;
+        width: 100vw;
+      }
+      header {
+        background-color: $headerbgdark-color !important;
+        width: 100vw;
+        margin-left: -1vw;
+        margin-top: -2vh;
+      }
+    
+    /*----------------------Bilder grids--------------------------------------------*/
+    .picGrid {
+      @include grid1x2;
+      display: none;
+      
+    
+      img {
+        @include imageDark;
+    }
+    }
+    
+    .picGrid2 {
+      @include grid1x2;
+      
+    
+      img {
+        @include imageDark (50vw);
+        
+    }
+    }
+    
+    /*------------------------h1------------------------------------------*/
+    .h1Change{
+      @include h1Change;
+    }
+    
+    /*------------------------SASS------------------------------------------*/
+    .SASS {
+      width: 50vw;
+      margin: auto;
+    
+      h1{
+        @include h1Change;
+      }
+    
+      p{
+        color: $text-color !important;
+        text-align: left;
+      }
+    }
+    
+    /*------------------------Krav------------------------------------------*/
+    .hemsidaKrav {
+      @include hemsidaText;
+    
+      h2{
+        color: $text-color !important;
+        text-decoration: underline;
+      }
+    
+      p{
+        color: $text-color !important;
+      }
+    }
+    
+    
+    .sassKrav {
+      @include hemsidaText;
+    
+    }
+    
+    }
+    
+    
+     /*------------------------Light------------------------------------------*/
+    
+    
+    @media (prefers-color-scheme:light) {
+    
+      body {
+        background-color: $lighttheme-background;
+        font-family: $font-style;
+        width: 100vw;
+      }
+      header {
+        background-color: $headerbg-color;
+        width: 100vw;
+        margin-left: -1vw;
+        margin-top: -2vh;
+      }
+    
+    /*----------------------Bilder grids--------------------------------------------*/
+    .picGrid {
+      @include grid1x2;
+      display: none;
+      
+    
+      img {
+        @include imageLight;
+    }
+    }
+    
+    .picGrid2 {
+      @include grid1x2;
+      
+    
+      img {
+        @include imageLight (50vw);
+        
+    }
+    }
+    
+    /*------------------------h1------------------------------------------*/
+    #h1Change{
+      color: $text-color;
+        text-align: center;
+        text-decoration: underline;
+    }
+    
+    /*------------------------SASS------------------------------------------*/
+    .SASS {
+      width: 70vw;
+      margin: auto;
+    
+      h1{
+        @include h1Change;
+      }
+    
+      p{
+        color: $text-color;
+        text-align: left;
+      }
+    }
+    
+    /*------------------------Krav------------------------------------------*/
+    
+    #hemsidaKrav {
+      @include hemsidaText;
+      width: 70vw;
+    
+      h2{
+        color: $text-color;
+        text-decoration: underline;
+      }
+    
+      p{
+        color: $text-color;
+      }
+    }
+    
+    #sassKrav {
+      @include hemsidaText;
+      width: 70vw;
+    
+    }
+    } 
+    }  
+  
+  
+    /*------------------------------------------------------------------*/
+  /*------------------------------------------------------------------*/
+  /*------------------------------------------------------------------*/
+  /*------------------------------------------------------------------*/
+  /*------------------------------------------------------------------*/
+  
+  @media (min-width: 300) and (max-width:599) {
+  
+    /*------------------------Dark------------------------------------------*/
+    
+    
+    @media (prefers-color-scheme:dark) {
+    
+      body {
+        background-color: $darktheme-background !important;
+        font-family: $font-style;
+        width: 100vw;
+      }
+      header {
+        background-color: $headerbgdark-color !important;
+        width: 100vw;
+        margin-left: -1vw;
+        margin-top: -2vh;
+      }
+    
+    /*----------------------Bilder grids--------------------------------------------*/
+    .picGrid {
+      @include grid1x2;
+      display: none;
+      
+    
+      img {
+        @include imageDark;
+    }
+    }
+    
+    .picGrid2 {
+      @include grid1x2;
+      
+      
+    
+      img {
+        @include imageDark (50vw);
+        margin-top: -25vh;
+        
+    }
+    }
+    
+    /*------------------------h1------------------------------------------*/
+    .h1Change{
+      @include h1Change;
+    }
+    
+    /*------------------------SASS------------------------------------------*/
+    .SASS {
+      width: 50vw;
+      margin: auto;
+    
+      h1{
+        @include h1Change;
+      }
+    
+      p{
+        color: $text-color !important;
+        text-align: left;
+      }
+    }
+    
+    /*------------------------Krav------------------------------------------*/
+    .hemsidaKrav {
+      @include hemsidaText;
+    
+      h2{
+        color: $text-color !important;
+        text-decoration: underline;
+      }
+    
+      p{
+        color: $text-color !important;
+      }
+    }
+    
+    
+    .sassKrav {
+      @include hemsidaText;
+    
+    }
+    
+    }
+    
+    
+     /*------------------------Light------------------------------------------*/
+    
+    
+    @media (prefers-color-scheme:light) {
+    
+      body {
+        background-color: $lighttheme-background;
+        font-family: $font-style;
+        width: 100vw;
+      }
+      header {
+        background-color: $headerbg-color;
+        width: 100vw;
+        margin-left: -1vw;
+        margin-top: -2vh;
+      }
+    
+    /*----------------------Bilder grids--------------------------------------------*/
+    .picGrid {
+      @include grid1x2;
+      display: none;
+      
+    
+      img {
+        @include imageLight;
+    }
+    }
+    
+    .picGrid2 {
+      @include grid1x2;
+      
+    
+      img {
+        @include imageLight (50vw);
+        margin-top: -25vh;
+        
+    }
+    }
+    
+    /*------------------------h1------------------------------------------*/
+    #h1Change{
+      color: $text-color;
+        text-align: center;
+        text-decoration: underline;
+    }
+    
+    /*------------------------SASS------------------------------------------*/
+    .SASS {
+      width: 88vw;
+      margin: auto;
+    
+      h1{
+        @include h1Change;
+      }
+    
+      p{
+        color: $text-color;
+        text-align: left;
+      }
+    }
+    
+    /*------------------------Krav------------------------------------------*/
+    
+    #hemsidaKrav {
+      @include hemsidaText;
+      width: 88vw;
+    
+      h2{
+        color: $text-color;
+        text-decoration: underline;
+      }
+    
+      p{
+        color: $text-color;
+      }
+    }
+    
+    #sassKrav {
+      @include hemsidaText;
+      width: 88vw;
+    
+    }
+    } 
+    }  
+  
+  

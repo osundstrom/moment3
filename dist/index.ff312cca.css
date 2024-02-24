@@ -309,7 +309,8 @@
   #buttonAnimation {
     text-align: center;
     background-color: green;
-    width: 20vw;
+    width: -moz-fit-content;
+    width: fit-content;
     height: 5vh;
     font-size: 100%;
     font-weight: 900;
@@ -499,7 +500,8 @@
   #buttonAnimation {
     text-align: center;
     background-color: green;
-    width: 20vw;
+    width: -moz-fit-content;
+    width: fit-content;
     height: 5vh;
     font-size: 100%;
     font-weight: 900;
