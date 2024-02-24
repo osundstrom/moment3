@@ -1,0 +1,85 @@
+
+
+@use "variabels";
+  
+  
+/*----------------------------------Dark--------------------------------*/
+
+
+
+
+
+  @media (prefers-color-scheme: dark) {
+  
+  
+    nav {
+      
+      ul {
+        padding: 1%;
+        list-style: none;
+        
+        
+      }
+    
+      li { 
+        display: inline-block;
+        
+      }
+    
+      a {
+        display: block;
+        padding: 6px 12px;
+        text-decoration: none;
+        color: variabels.$textdark-color !important;
+        
+        
+      }
+  
+      a:hover{
+        background-color: variabels.$hooverdark-color !important;
+        color: variabels.$text-color !important;
+        border: 1px solid variabels.$borderdark-color !important;
+      }
+    }
+  
+ 
+}
+  
+  
+  /*-------------------------------Light-----------------------------------*/
+  
+
+
+
+
+  @media (prefers-color-scheme: light) {
+  nav {
+      ul {
+        padding: 1%;
+        list-style: none;
+        margin-left: 1vw;
+      }
+    
+      li { 
+        display: inline-block;
+        
+      }
+    
+      a {
+        display: block;
+        padding: 6px 12px;
+        text-decoration: none;
+        color: variabels.$text-color;
+      }
+  
+      a:hover{
+        background-color: variabels.$text-color;
+        color: variabels.$light-color;
+      }
+    }
+  }
+  
+   
+  
+  
+  
