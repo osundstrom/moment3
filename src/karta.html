@@ -5,8 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="stylesheet.scss" />
     <title>Moment 5 - karta</title>
+
     
+
+    
+    
+     
     <script src="main.js" type="module"></script>
+    <script src="maps.js" type="module"></script>
 </head>
 
 <body>
@@ -23,7 +29,14 @@
         </nav>
     </header>
 
-   <div class="test"></div>
+   <div class="mapDiv">
+    <iframe id="iFrameID"  src="https://www.openstreetmap.org/export/embed.html?bbox=7.547607421875001%2C60.048389180435585%2C25.894775390625004%2C64.50591486519585&amp;layer=mapnik&amp;marker=62.36107867081494%2C16.7156982421875" style="border: 1px solid black"></iframe>
+    <br/>
+    
+            <input type="text" id="searchText">
+            <button type="button" id="searchButton">Sök</button>
+        </div>
+   </div>
     
 </body>
 </html>
