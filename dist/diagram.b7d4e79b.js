@@ -580,13 +580,18 @@ function hmrAccept(bundle /*: ParcelRequire */ , id /*: string */ ) {
 
 },{}],"fAZL5":[function(require,module,exports) {
 "use strict";
-/*-----------------------------Diagram-------------------------------------------*/ let diagramFetch = "https://studenter.miun.se/~mallar/dt211g/" // sätter diagramFecth till länken
+/*-----------------------------Diagram stapel-------------------------------------------*/ let diagramFetch = "https://studenter.miun.se/~mallar/dt211g/" // sätter diagramFecth till länken
 ;
 getData(); //Kör funktion
 async function getData() {
     const response = await fetch(diagramFetch) //Hämtar datan
     ;
     const data = await response.json(); // JSON
+    for(let x = 0; x < data.length; x++){
+        let programX = data[x];
+        if (programX.type === "Program") delete data[x] //Tar bort från data
+        ;
+    }
     data.sort((a, b)=>b.applicantsTotal - a.applicantsTotal); //sorterar efter antal sökande
     let courses = data.slice(0, 6); //bara 6 första i datan (högst antal ansökningar)
     let names = []; //top array
@@ -613,14 +618,40 @@ async function getData() {
             scales: {
                 y: {
                     beginAtZero: true
-                },
-                x: {
-                    ticks: {
-                        autoSkip: false,
-                        fontSize: 1
-                    }
-                }
+                } //Börjar på 0, y axel
             }
+        }
+    });
+}
+/*-----------------------------Diagram cirkel-------------------------------------------*/ getData2();
+async function getData2() {
+    const response = await fetch(diagramFetch) //Hämtar datan
+    ;
+    const data = await response.json(); // JSON
+    for(let x = 0; x < data.length; x++){
+        let kursX = data[x];
+        if (kursX.type === "Kurs") delete data[x] //Tar bort från data
+        ;
+    }
+    data.sort((a, b)=>b.applicantsTotal - a.applicantsTotal); //sorterar efter antal sökande
+    let courses = data.slice(0, 5); //bara 5 första i datan (högst antal ansökningar)
+    let names = []; //tom array
+    let applicants = []; // tom array
+    for(let x = 0; x < courses.length; x++){
+        names.push(courses[x].name); //Lägger till namn
+        applicants.push(courses[x].applicantsTotal); // Lägger till ansökning
+    }
+    let circleDiagram = document.getElementById("diagramTwo");
+    new Chart(circleDiagram, {
+        type: "pie",
+        data: {
+            labels: names,
+            datasets: [
+                {
+                    data: applicants,
+                    borderWidth: 1
+                }
+            ]
         }
     });
 }

@@ -165,10 +165,21 @@
 /*------------------------Diagram------------------------------------------*/
 
 #divDiagramOne {
-  width: 60vw;
+  width: 50vw;
   height: fit-content;
   margin: auto;
   top: 10vh;
+  margin-bottom: 10%;
+  background-color: antiquewhite;
+  position: relative;
+}
+
+
+#divDiagramTwo {
+  width: 30vw;
+  height: fit-content;
+  margin: auto;
+  margin-top: 10%;
   background-color: antiquewhite;
   position: relative;
 }

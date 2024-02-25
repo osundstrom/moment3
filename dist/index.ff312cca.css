@@ -346,12 +346,21 @@
 
   #divDiagramOne {
     background-color: #faebd7;
-    width: 60vw;
+    width: 50vw;
     height: -moz-fit-content;
     height: fit-content;
-    margin: auto;
+    margin: auto auto 10%;
     position: relative;
     top: 10vh;
+  }
+
+  #divDiagramTwo {
+    background-color: #faebd7;
+    width: 30vw;
+    height: -moz-fit-content;
+    height: fit-content;
+    margin: 10% auto auto;
+    position: relative;
   }
 }
 
