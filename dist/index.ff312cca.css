@@ -10,6 +10,7 @@
 
   nav a {
     padding: 6px 12px;
+    font-size: smaller;
     text-decoration: none;
     display: block;
     color: #fff !important;
@@ -36,6 +37,7 @@
   nav a {
     color: #000;
     padding: 6px 12px;
+    font-size: smaller;
     text-decoration: none;
     display: block;
   }
@@ -343,6 +345,48 @@
     margin-left: 5vw;
     position: relative;
   }
+
+  #divDiagramOne {
+    background-color: #faebd7;
+    width: 50vw;
+    height: -moz-fit-content;
+    height: fit-content;
+    margin: auto auto 10%;
+    position: relative;
+    top: 10vh;
+  }
+
+  #divDiagramTwo {
+    background-color: #faebd7;
+    width: 30vw;
+    height: -moz-fit-content;
+    height: fit-content;
+    margin: auto auto 10%;
+    position: relative;
+  }
+
+  #iFrameID {
+    width: 60vw;
+    height: 60vh;
+  }
+
+  .mapDiv {
+    text-align: center;
+    margin: 0 auto;
+    position: relative;
+    top: 10vh;
+  }
+
+  .mapDiv button {
+    width: -moz-fit-content;
+    width: fit-content;
+    height: 4vh;
+  }
+
+  .mapDiv input {
+    width: 25vw;
+    height: 3vh;
+  }
 }
 
 @media (prefers-color-scheme: dark) and (width <= 1025px) {
@@ -371,6 +415,24 @@
     width: 7vw;
     margin-top: -2vh;
     margin-bottom: 4vh;
+  }
+
+  #divDiagramOne {
+    background-color: #faebd7;
+    width: 90vw;
+    height: -moz-fit-content;
+    height: fit-content;
+    margin: 0 auto;
+    position: relative;
+  }
+
+  #divDiagramTwo {
+    background-color: #faebd7;
+    width: 80vw;
+    height: -moz-fit-content;
+    height: fit-content;
+    margin: 40% auto 0;
+    position: relative;
   }
 }
 
@@ -534,6 +596,48 @@
     margin-left: 5vw;
     position: relative;
   }
+
+  #divDiagramOne {
+    background-color: #faebd7;
+    width: 50vw;
+    height: -moz-fit-content;
+    height: fit-content;
+    margin: auto auto 10%;
+    position: relative;
+    top: 10vh;
+  }
+
+  #divDiagramTwo {
+    background-color: #faebd7;
+    width: 30vw;
+    height: -moz-fit-content;
+    height: fit-content;
+    margin: auto auto 10%;
+    position: relative;
+  }
+
+  #iFrameID {
+    width: 60vw;
+    height: 60vh;
+  }
+
+  .mapDiv {
+    text-align: center;
+    margin: 0 auto;
+    position: relative;
+    top: 10vh;
+  }
+
+  .mapDiv button {
+    width: -moz-fit-content;
+    width: fit-content;
+    height: 4vh;
+  }
+
+  .mapDiv input {
+    width: 25vw;
+    height: 3vh;
+  }
 }
 
 @media (prefers-color-scheme: light) and (width <= 1025px) {
@@ -562,6 +666,24 @@
     width: 7vw;
     margin-top: -2vh;
     margin-bottom: 4vh;
+  }
+
+  #divDiagramOne {
+    background-color: #faebd7;
+    width: 90vw;
+    height: -moz-fit-content;
+    height: fit-content;
+    margin: 0 auto;
+    position: relative;
+  }
+
+  #divDiagramTwo {
+    background-color: #faebd7;
+    width: 80vw;
+    height: -moz-fit-content;
+    height: fit-content;
+    margin: 40% auto 0;
+    position: relative;
   }
 }
 

@@ -162,6 +162,51 @@
  }
 
 
+/*------------------------Diagram------------------------------------------*/
+
+#divDiagramOne {
+  width: 50vw;
+  height: fit-content;
+  margin: auto;
+  top: 10vh;
+  margin-bottom: 10%;
+  background-color: antiquewhite;
+  position: relative;
+}
+
+
+#divDiagramTwo {
+  width: 30vw;
+  height: fit-content;
+  margin: auto;
+  margin-bottom: 10%;
+  background-color: antiquewhite;
+  position: relative;
+}
+
+
+#iFrameID{
+  width: 60vw;
+  height: 60vh;
+}
+
+.mapDiv {
+  margin: 0 auto;
+  position: relative;
+  top: 10vh;
+  text-align: center;
+
+  button {
+    height: 4vh;
+    width: fit-content;
+  }
+
+  input {
+    height: 3vh;
+    width: 25vw;
+  }
+}
+
 
 
  /*------------------------Media------------------------------------------*/
@@ -206,7 +251,27 @@ img{
  position: relative;
  
 }
+
+#divDiagramOne {
+  width: 90vw;
+  height: fit-content;
+  margin: 0 auto;
+  
+  background-color: antiquewhite;
+  position: relative;
+}
+
+
+#divDiagramTwo {
+  width: 80vw;
+  height: fit-content;
+  margin: 0 auto;
+  margin-top: 40%;
+  background-color: antiquewhite;
+  position: relative;
+}
  }
+
 
 }
 
@@ -369,6 +434,49 @@ margin-left: 5vw;
 
 }
 
+#divDiagramOne {
+  width: 50vw;
+  height: fit-content;
+  margin: auto;
+  top: 10vh;
+  margin-bottom: 10%;
+  background-color: antiquewhite;
+  position: relative;
+}
+
+
+#divDiagramTwo {
+  width: 30vw;
+  height: fit-content;
+  margin: auto;
+  margin-bottom: 10%;
+  background-color: antiquewhite;
+  position: relative;
+}
+
+
+#iFrameID{
+  width: 60vw;
+  height: 60vh;
+}
+
+.mapDiv {
+  margin: 0 auto;
+  position: relative;
+  top: 10vh;
+  text-align: center;
+
+  button {
+    height: 4vh;
+    width: fit-content;
+  }
+
+
+  input {
+    height: 3vh;
+    width: 25vw;
+  }
+}
 
 
  
@@ -414,6 +522,26 @@ margin-left: 5vw;
   position: relative;
   
  }
+
+ #divDiagramOne {
+  width: 90vw;
+  height: fit-content;
+  margin: 0 auto;
+  
+  background-color: antiquewhite;
+  position: relative;
+}
+
+
+#divDiagramTwo {
+  width: 80vw;
+  height: fit-content;
+  margin: 0 auto;
+  margin-top: 40%;
+  background-color: antiquewhite;
+  position: relative;
+}
+
   }
  
  }
