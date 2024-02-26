@@ -608,17 +608,34 @@ async function getData() {
             labels: names,
             datasets: [
                 {
-                    label: "Totala ans\xf6kningar",
+                    label: "Antal ans\xf6kningar",
                     data: applicants,
-                    borderWidth: 1
+                    borderWidth: 1,
+                    backgroundColor: "Orange"
                 }
             ]
         },
         options: {
-            scales: {
-                y: {
-                    beginAtZero: true
-                } //Börjar på 0, y axel
+            responsive: true,
+            aspectRatio: 1.5,
+            layout: {
+                padding: {
+                    left: 20,
+                    right: 20,
+                    top: 10,
+                    bottom: 10
+                }
+            },
+            indexAxis: "y",
+            plugins: {
+                title: {
+                    display: true,
+                    text: "Totalt antal ans\xf6kningar",
+                    position: "top",
+                    font: {
+                        size: 15
+                    }
+                }
             }
         }
     });
