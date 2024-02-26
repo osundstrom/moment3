@@ -41,20 +41,36 @@ async function getData() { //skapar funktion
         data: {
             labels: names, //Rubrikerna på varje stapel från names arrayen
             datasets: [{
-                label: "Totala ansökningar", //Rubrik, text ovan diagram
+                label: "Antal ansökningar",
                 data: applicants, //Datan från applicants arrayen
-                borderWidth: 1
+                borderWidth: 1,
+                backgroundColor: "Orange", //Färg staplar
             }]
         },
         options: {
-            scales: {
-                y: {
-                    beginAtZero: true
-                } //Börjar på 0, y axel
+            responsive: true, //responsiv
+            aspectRatio: 1.5, 
+            layout: {
+                padding: {
+                    left: 20,
+                    right: 20,
+                    top: 10,
+                    bottom: 10,
+                }
+            },
+            indexAxis: 'y', //Sidliggande stapeldiagram (staplar från y axel)
+            plugins: {
+                title: { //Titeln på digram
+                    display: true,
+                    text: "Totalt antal ansökningar", 
+                    position: "top", 
+                    font: {
+                        size: 15 
+                    }
+                },
 
-            }
-        }
-    })
+            
+}}})
 };
 
 
